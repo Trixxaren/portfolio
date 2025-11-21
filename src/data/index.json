@@ -4,7 +4,7 @@
       "id": "1",
       "src": "quizzpc.png",
       "title": "Quizmaster",
-      "description": "Ett quiz med olika kategorier gjort med JS & Html som en Single Page Application.",
+      "description": "Ett quiz med olika kategorier gjort med JS, html & vanilla css som en Single Page Application. ",
       "link": "https://quizmastertrixx.netlify.app/"
     },
     {
