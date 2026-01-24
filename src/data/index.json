@@ -9,7 +9,7 @@
     },
     {
       "id": "2",
-      "src": "alla2.png",
+      "src": "matbild.png",
       "title": "Hittarecept",
       "description": "En receptbok gjord med React JS, Tailwind, React Router, MealDB API mm.",
       "link": "https://hittarecept.netlify.app/"
