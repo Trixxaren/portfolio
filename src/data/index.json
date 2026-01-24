@@ -11,15 +11,15 @@
       "id": "2",
       "src": "matbild.png",
       "title": "Hittarecept",
-      "description": "En receptbok gjord med React JS, Tailwind, React Router, MealDB API mm.",
+      "description": "En receptbok gjord med React JS, Tailwind, React Router, MealDB API.",
       "link": "https://hittarecept.netlify.app/"
     },
     {
       "id": "3",
-      "src": "pcbakgrund.png",
-      "title": "Min GitHub",
-      "description": "Väderapp, chackspel, todoappm, mm.  Kika gärna in på min GitHub för att se mer.",
-      "link": "https://github.com/Trixxaren"
+      "src": "konnect.png",
+      "title": "Konnect ChatApp",
+      "description": "En modern chattapp byggd med React, Vite och Tailwind CSS, med CSRF-skydd, localStorage-sessioner och API-anrop (GET/POST/PUT/DELETE).",
+      "link": "https://konnectchat.netlify.app/"
     },
      {
       "id": "4",

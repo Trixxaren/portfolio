@@ -10,33 +10,19 @@ const AboutMe = () => {
           <div className="hero--section--content">
             <h2>Om mig</h2>
             <p className="text-md">
-              Jag är en lösningsorienterad och nyfiken person med ett stort
-              intresse för teknik, människor och problemlösning. Just nu
-              utbildar jag mig till front-end utvecklare på Jensen
-              Yrkeshögskola, där jag fördjupar mig i HTML, CSS, JavaScript,
-              React.js, TS, Tailwind, NPM, Git & GitHub, Figma, Agila
-              projektmetoder som t ex. Scrum & Kanban. Mitt mål är att skapa
-              användarvänliga och smarta digitala lösningar och jag ser fram
-              emot att kombinera mina nya tekniska färdigheter med mina tidigare
-              erfarenhet inom sälj och marknad. Vill även fortsätta utvecklas
-              inom fullstack och It-projektledare.
+              Jag är en lösningsorienterad och nyfiken frontendutvecklare med stark bakgrund inom försäljning och affärsdrivna roller. Just nu studerar jag Frontend Development på Jensen Yrkeshögskola, där jag arbetar med HTML, CSS, JavaScript, TypeScript, React, Next.js, Vite och Tailwind CSS, samt verktyg som Git/GitHub, npm, Node.js, Figma och Miro. Jag drivs av att bygga användarvänliga, responsiva och tillgängliga webblösningar där teknik möter verkliga affärs och användarbehov.
             </p>
             <p className="text-md">
-              Tdigare var jag Key Account Manager på Viaplay Group Radio, där
-              jag ansvarade för strategiska samarbeten med några av Sveriges
-              största företag. Jag har en stark känsla för att bygga relationer,
-              skapa värde och driva projekt från idé till resultat, något jag nu
-              tar med mig in i framtiden som utvecklare.
+           Tidigare var jag Key Account Manager på Viaplay Group Radio och ansvarade för strategiska samarbeten med några av Sveriges största företag. Där utvecklade jag starka färdigheter inom kundansvar, behovsanalys och att driva projekt från idé till resultat, erfarenheter jag idag tar med mig in i utvecklarrollen.
             </p>
             <p className="text-md">
-              En målinriktad doer som trivs i team, med stort eget ansvar. Drivs
-              av utveckling, både på det personliga och tekniska planet. Där
-              nästa steg just nu är ut på praktik där jag får växa som
-              utvecklare och bidra med mina kunskaper.
+             Jag är en målinriktad doer som trivs i team, tar stort eget ansvar och vill fortsätta utvecklas både tekniskt och personligt. Nästa steg för mig är på ett företag där jag får växa som utvecklare och bidra med mina kunskaper, med mål att på sikt utvecklas inom fullstack och IT-projektledning.
             </p>
             <a
-              href="https://drive.google.com/file/d/18NIb5lOB8Xqs0khjda3A_mRYyscITeVk/view"
+              href="https://drive.google.com/file/d/14bKXvOOj3tvWqkp1NoLxmeprNxt7YNqo/view?usp=drive_link"
               download
+               target="_blank"
+                rel="noopener noreferrer"
             >
               <button className="btn btn-black">Ladda ner CV</button>
             </a>
