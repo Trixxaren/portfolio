@@ -4,28 +4,40 @@
       "id": "1",
       "src": "quizz.png",
       "title": "Quizmaster",
-      "description": "Ett quiz med olika kategorier gjort med JS, html & vanilla css som en Single Page Application. ",
+      "titleEn": "Quizmaster",
+      "description": "Ett quiz med olika kategorier byggt med JavaScript, HTML och CSS som en Single Page Application.",
+      "descriptionEn": "A quiz app with multiple categories built with JavaScript, HTML, and CSS as a Single Page Application.",
+      "stack": ["JavaScript", "HTML", "CSS", "SPA"],
       "link": "https://quizmastertrixx.netlify.app/"
     },
     {
       "id": "2",
       "src": "matbild.png",
       "title": "Hittarecept",
-      "description": "En receptbok gjord med React JS, Tailwind, React Router, MealDB API.",
+      "titleEn": "Recipe Finder",
+      "description": "En receptapp byggd med React, Tailwind CSS, React Router och MealDB API.",
+      "descriptionEn": "A recipe app built with React, Tailwind CSS, React Router, and the MealDB API.",
+      "stack": ["React", "Tailwind", "React Router", "API"],
       "link": "https://hittarecept.netlify.app/"
     },
     {
       "id": "3",
       "src": "konnect.png",
       "title": "Konnect ChatApp",
-      "description": "En modern chattapp byggd med React, Vite och Tailwind CSS, med CSRF-skydd, localStorage-sessioner och API-anrop (GET/POST/PUT/DELETE).",
+      "titleEn": "Konnect ChatApp",
+      "description": "En modern chattapp byggd med React, Vite och Tailwind CSS med API-anrop, CRUD och sessionshantering.",
+      "descriptionEn": "A modern chat app built with React, Vite, and Tailwind CSS with API requests, CRUD, and session handling.",
+      "stack": ["React", "Vite", "Tailwind", "CRUD", "API"],
       "link": "https://konnectchat.netlify.app/"
     },
-     {
+    {
       "id": "4",
       "src": "Olivershemsida.png",
       "title": "Namngivelse inbjudan",
-      "description": "Responsiv design byggd i React + Vite med Tailwind CSS. Innehåller ett OSA-formulär via Formspree och är deployad på Netlify.",
+      "titleEn": "Naming Ceremony Invitation",
+      "description": "Responsiv webbplats byggd i React och Vite med Tailwind CSS samt OSA-formulär via Formspree.",
+      "descriptionEn": "Responsive website built with React and Vite using Tailwind CSS and an RSVP form powered by Formspree.",
+      "stack": ["React", "Vite", "Tailwind", "Formspree"],
       "link": "https://oliverhoffmann.netlify.app/"
     }
   ]

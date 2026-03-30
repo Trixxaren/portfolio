@@ -1,38 +1,67 @@
-import React from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
 
-const ContactMe = () => {
+const content = {
+  sv: {
+    kicker: "Kontakt",
+    title: "Kontakta mig",
+    description:
+      "Skriv gärna ett meddelande här eller kontakta mig via LinkedIn.",
+    firstName: "Förnamn",
+    lastName: "Efternamn",
+    email: "E-post",
+    phone: "Telefonnummer",
+    message: "Meddelande",
+    placeholder: "Skriv ditt meddelande...",
+    submit: "Skicka",
+    sending: "Skickar...",
+  },
+  en: {
+    kicker: "Contact",
+    title: "Contact me",
+    description:
+      "Feel free to send me a message here or contact me via LinkedIn.",
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Email",
+    phone: "Phone number",
+    message: "Message",
+    placeholder: "Write your message...",
+    submit: "Send",
+    sending: "Sending...",
+  },
+};
+
+const ContactMe = ({ language }) => {
   const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xqapopdp");
+  const t = content[language];
 
-  if (state.succeeded) {
-    navigate("/thank-you");
-    return null;
-  }
+  useEffect(() => {
+    if (state.succeeded) {
+      navigate("/thank-you");
+    }
+  }, [state.succeeded, navigate]);
 
   return (
     <section className="contact--section" id="Contact">
       <div className="container contact__inner">
-        {" "}
-        <div>
-          <h2>Kontakta mig</h2>
-          <p className="text-lg">
-            Kontakta gärna mig här eller direkt via LinkedIn.
-          </p>
+        <div className="section-heading">
+          <p className="section-kicker">{t.kicker}</p>
+          <h2>{t.title}</h2>
+          <p className="section-description">{t.description}</p>
         </div>
+
         <form
           className="contact--form--container"
           onSubmit={handleSubmit}
           method="POST"
           action="https://formspree.io/f/xqapopdp"
         >
-          <input type="hidden" name="form-name" value="contact" />
-
           <div className="form-row">
-            {" "}
             <label htmlFor="first-name" className="contact--label">
-              <span className="text-md">Förnamn</span>
+              <span className="text-md">{t.firstName}</span>
               <input
                 type="text"
                 className="contact--input text-md"
@@ -41,8 +70,9 @@ const ContactMe = () => {
                 required
               />
             </label>
+
             <label htmlFor="last-name" className="contact--label">
-              <span className="text-md">Efternamn</span>
+              <span className="text-md">{t.lastName}</span>
               <input
                 type="text"
                 className="contact--input text-md"
@@ -51,8 +81,11 @@ const ContactMe = () => {
                 required
               />
             </label>
+          </div>
+
+          <div className="form-row">
             <label htmlFor="email" className="contact--label">
-              <span className="text-md">E-post</span>
+              <span className="text-md">{t.email}</span>
               <input
                 type="email"
                 className="contact--input text-md"
@@ -61,36 +94,35 @@ const ContactMe = () => {
                 required
               />
               <ValidationError
-                prefix="E-post"
+                prefix={t.email}
                 field="email"
                 errors={state.errors}
               />
             </label>
+
             <label htmlFor="phone-number" className="contact--label">
-              {" "}
-              <span className="text-md">Telefonnummer</span>
+              <span className="text-md">{t.phone}</span>
               <input
                 type="tel"
                 className="contact--input text-md"
                 name="phone-number"
                 id="phone-number"
-                required
               />
             </label>
           </div>
 
           <label htmlFor="message" className="contact--label">
-            <span className="text-md">Meddelande</span>
+            <span className="text-md">{t.message}</span>
             <textarea
-              className="contact--input text-md"
+              className="contact--input text-md contact--textarea"
               id="message"
               name="message"
               rows="8"
-              placeholder="Skriv ditt meddelande..."
+              placeholder={t.placeholder}
               required
             />
             <ValidationError
-              prefix="Meddelande"
+              prefix={t.message}
               field="message"
               errors={state.errors}
             />
@@ -102,7 +134,7 @@ const ContactMe = () => {
               type="submit"
               disabled={state.submitting}
             >
-              Skicka
+              {state.submitting ? t.sending : t.submit}
             </button>
           </div>
         </form>

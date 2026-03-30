@@ -1,16 +1,41 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
-const Navbar = () => {
-  const [navActive, setNavActive] = useState(false);
+const content = {
+  sv: {
+    home: "Hem",
+    skills: "Kunskaper",
+    about: "Om mig",
+    projects: "Projekt",
+    contact: "Kontakta mig",
+    brand: "Robin Vikström",
+    toggle: "EN",
+  },
+  en: {
+    home: "Home",
+    skills: "Skills",
+    about: "About",
+    projects: "Projects",
+    contact: "Contact me",
+    brand: "Robin Vikström",
+    toggle: "SV",
+  },
+};
 
-  const toggleNav = () => setNavActive((v) => !v);
+const Navbar = ({ language, toggleLanguage }) => {
+  const [navActive, setNavActive] = useState(false);
+  const t = content[language];
+
+  const toggleNav = () => setNavActive((prev) => !prev);
   const closeMenu = () => setNavActive(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 900) closeMenu();
+      if (window.innerWidth > 900) {
+        closeMenu();
+      }
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -18,21 +43,24 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container navbar__inner">
-        {" "}
-        <div>
-          <img className="logotype" src="/favicon-32x32.png" alt="RV Logo" />{" "}
-        </div>
+        <a href="/" className="navbar__brand" aria-label="Startsida">
+          <img className="logotype" src="/favicon-32x32.png" alt="RV Logo" />
+          <span>{t.brand}</span>
+        </a>
+
         <button
           className={`nav__hamburger ${navActive ? "active" : ""}`}
           onClick={toggleNav}
           aria-label="Öppna meny"
           aria-expanded={navActive}
           aria-controls="navMenu"
+          type="button"
         >
           <span className="nav__hamburger__line"></span>
           <span className="nav__hamburger__line"></span>
           <span className="nav__hamburger__line"></span>
         </button>
+
         <div
           id="navMenu"
           className={`navbar--items ${navActive ? "active" : ""}`}
@@ -42,58 +70,83 @@ const Navbar = () => {
               <Link
                 onClick={closeMenu}
                 activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
+                spy
+                smooth
+                offset={-80}
                 duration={500}
                 to="heroSection"
                 className="navbar--content"
               >
-                Hem
+                {t.home}
               </Link>
             </li>
             <li>
               <Link
                 onClick={closeMenu}
                 activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
+                spy
+                smooth
+                offset={-80}
                 duration={500}
-                to="MyPortfolio"
+                to="skills"
                 className="navbar--content"
               >
-                Projekt
+                {t.skills}
               </Link>
             </li>
             <li>
               <Link
                 onClick={closeMenu}
                 activeClass="navbar--active-content"
-                spy={true}
-                smooth={true}
-                offset={-70}
+                spy
+                smooth
+                offset={-80}
                 duration={500}
                 to="AboutMe"
                 className="navbar--content"
               >
-                Om mig
+                {t.about}
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={closeMenu}
+                activeClass="navbar--active-content"
+                spy
+                smooth
+                offset={-80}
+                duration={500}
+                to="MyPortfolio"
+                className="navbar--content"
+              >
+                {t.projects}
               </Link>
             </li>
           </ul>
         </div>
-        <Link
-          onClick={closeMenu}
-          activeClass="navbar--active-content"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          to="Contact"
-          className="btn btn-outline-primary"
-        >
-          Kontakta mig
-        </Link>
+
+        <div className="navbar__actions">
+          <button
+            type="button"
+            className="btn btn-outline-primary navbar__lang"
+            onClick={toggleLanguage}
+          >
+            {t.toggle}
+          </button>
+
+          <Link
+            onClick={closeMenu}
+            activeClass="navbar--active-content"
+            spy
+            smooth
+            offset={-80}
+            duration={500}
+            to="Contact"
+            className="btn btn-primary navbar__cta"
+          >
+            {t.contact}
+          </Link>
+        </div>
       </div>
     </nav>
   );
