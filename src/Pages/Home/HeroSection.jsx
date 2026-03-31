@@ -52,7 +52,7 @@ const HeroSection = ({ language }) => {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/138ROqXIIjvADR7flPA-2qQlwkKT0qlKH/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1mfcjgaltGxxs7uSwZvb9EuQyEVwh5WWR/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-primary"
