@@ -2,10 +2,12 @@ const content = {
   sv: {
     kicker: "Om mig",
     title: "Frontend med affärsförståelse",
-    p1: "Jag är frontendutvecklare med bakgrund inom försäljning och affärsdrivna roller. Just nu studerar jag Frontend Development på Jensen Yrkeshögskola.",
+    p1: "Jag är frontendutvecklare med bakgrund inom försäljning och affärsdrivna roller. Just nu studerar jag Frontend utvecklare på Jensen Yrkeshögskola.",
     p2: "Tidigare arbetade jag som Key Account Manager på Viaplay Group Radio, där jag ansvarade för strategiska samarbeten och projekt tillsammans med några av Sveriges största företag.",
     p3: "Det har gett mig starka färdigheter inom kundansvar, behovsanalys och att driva arbete från idé till resultat. Idag tar jag med mig den erfarenheten in i utveckling och bygger lösningar som både fungerar tekniskt och skapar värde för användaren.",
     button: "Ladda ner CV",
+    cvLink:
+      "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
   },
   en: {
     kicker: "About me",
@@ -14,6 +16,8 @@ const content = {
     p2: "Previously, I worked as a Key Account Manager at Viaplay Group Radio, where I was responsible for strategic partnerships and projects together with some of Sweden’s largest companies.",
     p3: "That gave me strong skills in client responsibility, needs analysis, and driving work from idea to result. Today, I bring that experience into development and build solutions that work technically while also creating value for the user.",
     button: "Download CV",
+    cvLink:
+      "https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link",
   },
 };
 
@@ -41,7 +45,7 @@ const AboutMe = ({ language }) => {
 
           <div className="about__actions">
             <a
-              href="https://drive.google.com/file/d/1mfcjgaltGxxs7uSwZvb9EuQyEVwh5WWR/view?usp=drive_link"
+              href={t.cvLink}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-black"

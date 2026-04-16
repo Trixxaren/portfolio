@@ -3,23 +3,27 @@ const content = {
     eyebrow: "Frontend Developer",
     title1: "Robin Vikström",
     description:
-      "Jag studerar frontendutveckling på Jensen Yrkeshögskola. Med bakgrund inom försäljning, senast som Key Account Manager. Jag är en person som drivs av teknik och affärer.",
+      "Jag är van att driva affärer, bygga långsiktiga kundrelationer och skapa resultat. Med en bakgrund inom försäljning kombinerar jag affärsfokus med teknisk förståelse och trivs i roller där jag får ta ansvar och skapa värde.",
     meta1: "Stockholm, Sweden",
     meta2: "React • JavaScript • TypeScript",
-    meta3: "Frontend • API-integration • UI/UX",
+    meta3: "Frontend Developer | Key Account Manager",
     projectsBtn: "Se mina projekt",
     cvBtn: "Visa CV",
+    cvLink:
+      "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
   },
   en: {
     eyebrow: "Frontend Developer Student",
     title1: "Robin Vikström",
     description:
-      "I study Frontend Development at Jensen Higher Vocational Education. With a background in sales, most recently as a Key Account Manager, I am driven by both technology and business.",
+      "I am experienced in driving business, building long-term client relationships, and delivering results. With a background in sales, I combine a strong business focus with technical understanding and thrive in roles where I can take ownership and create value.",
     meta1: "Stockholm, Sweden",
     meta2: "React • JavaScript • TypeScript",
-    meta3: "Frontend • API integration • UI/UX",
+    meta3: "Frontend Developer | Key Account Manager",
     projectsBtn: "View my projects",
     cvBtn: "View CV",
+    cvLink:
+      "https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link",
   },
 };
 
@@ -52,7 +56,7 @@ const HeroSection = ({ language }) => {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1mfcjgaltGxxs7uSwZvb9EuQyEVwh5WWR/view?usp=drive_link"
+                href={t.cvLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-primary"
