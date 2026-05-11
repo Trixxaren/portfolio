@@ -6,6 +6,15 @@ import {
   FaGithub,
   FaGitAlt,
   FaNodeJs,
+  FaHandshake,
+  FaUserTie,
+  FaUsers,
+  FaChartLine,
+  FaBalanceScale,
+  FaLightbulb,
+  FaRegSmile,
+  FaComments,
+  FaLaptopCode,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
@@ -15,6 +24,9 @@ import {
   SiVite,
   SiJsonwebtokens,
 } from "react-icons/si";
+import {
+  DiScrum,
+} from "react-icons/di";
 
 const FigmaIcon = () => (
   <svg
@@ -73,6 +85,7 @@ const content = {
           { name: "Next.js", icon: <SiNextdotjs /> },
           { name: "Vite", icon: <SiVite /> },
           { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        
         ],
       },
       {
@@ -86,6 +99,20 @@ const content = {
           { name: "API-integration", icon: <FaReact /> },
         ],
       },
+      {
+  title: "Försäljning & Affär",
+  items: [
+    { name: "B2B-försäljning", icon: <FaHandshake /> },
+    { name: "Key Account Management", icon: <FaUserTie /> },
+    { name: "Kundrelationer", icon: <FaUsers /> },
+    { name: "Affärsutveckling", icon: <FaChartLine /> },
+    { name: "Förhandling", icon: <FaBalanceScale /> },
+    { name: "Lösningsorienterad försäljning", icon: <FaLightbulb /> },
+    { name: "Customer Success", icon: <FaRegSmile /> },
+    { name: "Presentation & Kommunikation", icon: <FaComments /> },
+    { name: "Teknisk förståelse", icon: <FaLaptopCode /> },
+  ],
+},
       {
         title: "Övrigt",
         items: [
@@ -104,6 +131,7 @@ const content = {
     title: "My skills",
     description: "Technologies and ways of working that I use in my projects.",
     groups: [
+    
       {
         title: "Frontend",
         items: [
@@ -115,6 +143,8 @@ const content = {
           { name: "Next.js", icon: <SiNextdotjs /> },
           { name: "Vite", icon: <SiVite /> },
           { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+           { name: "Responsive design", icon: <FaCss3Alt /> },
+          { name: "Semantic HTML & WCAG", icon: <FaHtml5 /> },
         ],
       },
       {
@@ -129,14 +159,28 @@ const content = {
         ],
       },
       {
+        title: "Sales & Business",
+        items: [
+          {name: "B2B Sales", icon: <FaHandshake /> },
+           {name: "Key Account Management", icon: <FaUserTie /> },
+           {name: "Client Relations", icon: <FaUsers /> },
+           {name: "Business Development", icon: <FaChartLine /> },
+           {name: "Negotiation", icon: <FaBalanceScale /> },
+           {name: "Solution Selling", icon: <FaLightbulb /> },
+           {name: "Customer Success", icon: <FaRegSmile /> },
+           {name: "Presentation & Communication", icon: <FaComments /> },
+           {name: "Technical Understanding", icon: <FaLaptopCode /> },
+        ],
+      },
+      {
         title: "Other",
         items: [
           { name: "Git", icon: <FaGitAlt /> },
           { name: "GitHub", icon: <FaGithub /> },
           { name: "Figma", icon: <FigmaIcon /> },
           { name: "Miro", icon: <MiroIcon /> },
-          { name: "Responsive design", icon: <FaCss3Alt /> },
-          { name: "Semantic HTML", icon: <FaHtml5 /> },
+          { name: "Scrum", icon: <DiScrum /> },
+
         ],
       },
     ],

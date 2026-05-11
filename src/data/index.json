@@ -5,9 +5,16 @@
       "src": "quizz.png",
       "title": "Quizmaster",
       "titleEn": "Quizmaster",
-      "description": "Ett quiz med olika kategorier byggt med JavaScript, HTML och CSS som en Single Page Application.",
-      "descriptionEn": "A quiz app with multiple categories built with JavaScript, HTML, and CSS as a Single Page Application.",
-      "stack": ["JavaScript", "HTML", "CSS", "SPA"],
+      "description": "Ett quiz med flera olika kategorier byggt som en Single Page Application med JavaScript, HTML och CSS, med fokus på interaktivitet, användarupplevelse och responsiv design.",
+      "descriptionEn": "A quiz application with multiple categories built as a Single Page Application using JavaScript, HTML, and CSS, with focus on interactivity, user experience, and responsive design.",
+      "stack": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SPA",
+        "Responsive Design",
+        "DOM Manipulation"
+      ],
       "link": "https://quizmastertrixx.netlify.app/"
     },
     {
@@ -15,9 +22,16 @@
       "src": "matbild.png",
       "title": "Hittarecept",
       "titleEn": "Recipe Finder",
-      "description": "En receptapp byggd med React, Tailwind CSS, React Router och MealDB API.",
-      "descriptionEn": "A recipe app built with React, Tailwind CSS, React Router, and the MealDB API.",
-      "stack": ["React", "Tailwind", "React Router", "API"],
+      "description": "En receptapp byggd med React, Tailwind CSS, React Router och MealDB API, med fokus på dynamisk datahantering, responsiv design och en smidig användarupplevelse.",
+      "descriptionEn": "A recipe application built with React, Tailwind CSS, React Router, and the MealDB API, with focus on dynamic data handling, responsive design, and a smooth user experience.",
+      "stack": [
+        "React",
+        "Tailwind",
+        "React Router",
+        "API",
+        "State Management",
+        "Responsive UI"
+      ],
       "link": "https://hittarecept.netlify.app/"
     },
     {
@@ -25,9 +39,18 @@
       "src": "konnect.png",
       "title": "Konnect ChatApp",
       "titleEn": "Konnect ChatApp",
-      "description": "En modern chattapp byggd med React, Vite och Tailwind CSS med API-anrop, CRUD och sessionshantering.",
-      "descriptionEn": "A modern chat app built with React, Vite, and Tailwind CSS with API requests, CRUD, and session handling.",
-      "stack": ["React", "Vite", "Tailwind", "CRUD", "API"],
+      "description": "En modern chattapplikation byggd med React, Vite och Tailwind CSS, med fokus på API-anrop, CRUD-funktionalitet, sessionshantering och en responsiv användarupplevelse.",
+      "descriptionEn": "A modern chat application built with React, Vite, and Tailwind CSS, with focus on API requests, CRUD functionality, session handling, and a responsive user experience.",
+      "stack": [
+        "React",
+        "Vite",
+        "Tailwind",
+        "CRUD",
+        "API",
+        "Authentication",
+        "Protected Routes",
+        "Session Handling"
+      ],
       "link": "https://konnectchat.netlify.app/"
     },
     {
@@ -35,9 +58,16 @@
       "src": "Olivershemsida.png",
       "title": "Namngivelse inbjudan",
       "titleEn": "Naming Ceremony Invitation",
-      "description": "Responsiv webbplats byggd i React och Vite med Tailwind CSS samt OSA-formulär via Formspree.",
-      "descriptionEn": "Responsive website built with React and Vite using Tailwind CSS and an RSVP form powered by Formspree.",
-      "stack": ["React", "Vite", "Tailwind", "Formspree"],
+      "description": "En responsiv webbplats byggd med React, Vite och Tailwind CSS, med fokus på modern design, användarupplevelse och formulärhantering via Formspree.",
+      "descriptionEn": "A responsive website built with React, Vite, and Tailwind CSS, with focus on modern design, user experience, and form handling through Formspree.",
+      "stack": [
+        "React",
+        "Vite",
+        "Tailwind",
+        "Formspree",
+        "Responsive Design",
+        "UX"
+      ],
       "link": "https://oliverhoffmann.netlify.app/"
     }
   ]

@@ -1,25 +1,26 @@
 const content = {
   sv: {
-    eyebrow: "Frontend Developer",
+    eyebrow: "Frontend • Business • Digitala lösningar",
     title1: "Robin Vikström",
     description:
-      "Jag är van att driva affärer, bygga långsiktiga kundrelationer och skapa resultat. Med en bakgrund inom försäljning kombinerar jag affärsfokus med teknisk förståelse och trivs i roller där jag får ta ansvar och skapa värde.",
+      "Jag kombinerar teknisk förståelse med erfarenhet inom försäljning, kundrelationer och moderna digitala lösningar. Jag trivs i roller där jag får kombinera affärsfokus, problemlösning och användarupplevelse för att skapa värde.",
     meta1: "Stockholm, Sweden",
     meta2: "React • JavaScript • TypeScript",
-    meta3: "Frontend Developer | Key Account Manager",
+    meta3: "Frontendutvecklare | Försäljning & affärsutveckling",
     projectsBtn: "Se mina projekt",
     cvBtn: "Visa CV",
     cvLink:
       "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
   },
+
   en: {
-    eyebrow: "Frontend Developer Student",
+    eyebrow: "Frontend • Business • Digital Solutions",
     title1: "Robin Vikström",
     description:
-      "I am experienced in driving business, building long-term client relationships, and delivering results. With a background in sales, I combine a strong business focus with technical understanding and thrive in roles where I can take ownership and create value.",
+      "I combine technical understanding with experience in sales, customer relationships, and modern digital solutions. I thrive in roles where I can combine business focus, problem-solving, and user experience to create value.",
     meta1: "Stockholm, Sweden",
     meta2: "React • JavaScript • TypeScript",
-    meta3: "Frontend Developer | Key Account Manager",
+    meta3: "Frontend Developer | Sales & Business",
     projectsBtn: "View my projects",
     cvBtn: "View CV",
     cvLink:
@@ -37,10 +38,7 @@ const HeroSection = ({ language }) => {
           <p className="hero__eyebrow">{t.eyebrow}</p>
 
           <div className="hero--section--content">
-            <h1 className="hero--section--title">
-              {t.title1}{" "}
-              <span className="hero--section--title--color">{t.title2}</span>
-            </h1>
+            <h1 className="hero--section--title">{t.title1}</h1>
 
             <p className="hero--section--description">{t.description}</p>
 
@@ -59,7 +57,7 @@ const HeroSection = ({ language }) => {
                 href={t.cvLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-outline-primary"
+                className="btn btn-primary"
               >
                 {t.cvBtn}
               </a>

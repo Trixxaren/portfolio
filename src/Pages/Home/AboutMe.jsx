@@ -2,20 +2,20 @@ const content = {
   sv: {
     kicker: "Om mig",
     title: "Frontend med affärsförståelse",
-    p1: "Jag är frontendutvecklare med bakgrund inom försäljning och affärsdrivna roller. Just nu studerar jag Frontend utvecklare på Jensen Yrkeshögskola.",
-    p2: "Tidigare arbetade jag som Key Account Manager på Viaplay Group Radio, där jag ansvarade för strategiska samarbeten och projekt tillsammans med några av Sveriges största företag.",
-    p3: "Det har gett mig starka färdigheter inom kundansvar, behovsanalys och att driva arbete från idé till resultat. Idag tar jag med mig den erfarenheten in i utveckling och bygger lösningar som både fungerar tekniskt och skapar värde för användaren.",
-    button: "Ladda ner CV",
+    p1: "Jag är frontendutvecklare med erfarenhet inom försäljning, kundrelationer och moderna digitala lösningar. Just nu studerar jag Frontendutveckling på JENSEN Yrkeshögskola.",
+    p2: "Tidigare arbetade jag som Key Account Manager på Viaplay Group Radio, där jag ansvarade för strategiska samarbeten och affärsdrivna projekt tillsammans med några av Sveriges största företag.",
+    p3: "Min bakgrund har gett mig starka färdigheter inom kommunikation, behovsanalys och att driva arbete från idé till färdig lösning. Idag kombinerar jag den erfarenheten med teknisk förståelse för att bygga moderna och användarvänliga webbupplevelser.",
+button: "Ladda ner CV",
     cvLink:
       "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
   },
   en: {
     kicker: "About me",
     title: "Frontend with business understanding",
-    p1: "I am a frontend developer with a background in sales and business-driven roles. Right now I study Frontend Development at Jensen Higher Vocational Education.",
-    p2: "Previously, I worked as a Key Account Manager at Viaplay Group Radio, where I was responsible for strategic partnerships and projects together with some of Sweden’s largest companies.",
-    p3: "That gave me strong skills in client responsibility, needs analysis, and driving work from idea to result. Today, I bring that experience into development and build solutions that work technically while also creating value for the user.",
-    button: "Download CV",
+    p1: "I’m a frontend developer with experience in sales, customer relations, and modern digital solutions. I’m currently studying Frontend Development at JENSEN Higher Vocational Education.",
+    p2: "Previously, I worked as a Key Account Manager at Viaplay Group Radio, where I was responsible for strategic partnerships and business-driven projects together with some of Sweden’s largest companies.",
+    p3: "My background has given me strong skills in communication, needs analysis, and driving projects from idea to finished solution. Today, I combine that experience with technical understanding to build modern and user-friendly web experiences.",
+button: "Download CV",
     cvLink:
       "https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link",
   },
