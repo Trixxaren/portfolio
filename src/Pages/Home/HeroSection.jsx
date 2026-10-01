@@ -1,78 +1,68 @@
-const content = {
-  sv: {
-    eyebrow: "Frontend • Business • Digitala lösningar",
-    title1: "Robin Vikström",
-    description:
-      "Jag kombinerar teknisk förståelse med erfarenhet inom försäljning, kundrelationer och moderna digitala lösningar. Jag trivs i roller där jag får kombinera affärsfokus, problemlösning och användarupplevelse för att skapa värde.",
-    meta1: "Stockholm, Sweden",
-    meta2: "React • JavaScript • TypeScript",
-    meta3: "Frontendutvecklare | Försäljning & affärsutveckling",
-    projectsBtn: "Se mina projekt",
-    cvBtn: "Visa CV",
-    cvLink:
-      "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
-  },
-
-  en: {
-    eyebrow: "Frontend • Business • Digital Solutions",
-    title1: "Robin Vikström",
-    description:
-      "I combine technical understanding with experience in sales, customer relationships, and modern digital solutions. I thrive in roles where I can combine business focus, problem-solving, and user experience to create value.",
-    meta1: "Stockholm, Sweden",
-    meta2: "React • JavaScript • TypeScript",
-    meta3: "Frontend Developer | Sales & Business",
-    projectsBtn: "View my projects",
-    cvBtn: "View CV",
-    cvLink:
-      "https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link",
-  },
-};
-
-const HeroSection = ({ language }) => {
-  const t = content[language];
-
+﻿import { FiArrowDownRight, FiArrowUpRight } from "react-icons/fi";
+import { copy } from "../../data/copy";
+export default function HeroSection({ language }) {
+  const t = copy[language],
+    sv = language === "sv";
   return (
-    <section id="heroSection" className="hero--section">
-      <div className="container hero__inner">
-        <div className="hero--section--content-box">
-          <p className="hero__eyebrow">{t.eyebrow}</p>
-
-          <div className="hero--section--content">
-            <h1 className="hero--section--title">{t.title1}</h1>
-
-            <p className="hero--section--description">{t.description}</p>
-
-            <div className="hero__meta">
-              <span>{t.meta1}</span>
-              <span>{t.meta2}</span>
-              <span>{t.meta3}</span>
-            </div>
-
-            <div className="hero__actions">
-              <a href="#MyPortfolio" className="btn btn-primary">
-                {t.projectsBtn}
-              </a>
-
-              <a
-                href={t.cvLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                {t.cvBtn}
-              </a>
-            </div>
+    <section className="hero container" id="heroSection">
+      <div className="hero-content">
+        <div className="hero-writing">
+          <p className="eyebrow">
+            <span className="live-dot" />{" "}
+            {sv
+              ? "AFFÄR, TEKNIK & ALLT DÄREMELLAN"
+              : "BUSINESS, TECHNOLOGY & EVERYTHING BETWEEN"}
+          </p>
+          <h1>
+            {sv ? "Affärsdriven," : "Business-minded,"}
+            <br />
+            <span>{sv ? "tekniskt nyfiken" : "technically curious"}</span>
+            <br />
+            {sv
+              ? "och bygger gärna egna projekt."
+              : "and always building personal projects."}
+          </h1>
+          <p className="hero-intro">{t.intro}</p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#MyPortfolio">
+              {sv ? "Se mina projekt" : "Explore my projects"}
+              <FiArrowDownRight />
+            </a>
+            <a className="text-link" href="#AboutMe">
+              {sv ? "Lite mer om mig" : "A little about me"}
+              <FiArrowUpRight />
+            </a>
           </div>
         </div>
-
-        <div className="hero--section--image">
-          <div className="hero__image-card">
-            <img src="/profilbild.png" alt="Profilbild på Robin Vikström" />
+        <div className="hero-portrait">
+          <div className="portrait-frame">
+            <img
+              src="/profilbild.png"
+              alt="Robin Vikström"
+              width="800"
+              height="800"
+              fetchPriority="high"
+            />
+          </div>
+          <div className="portrait-caption">
+            <span>
+              <strong>Robin Vikström</strong>
+              <small>Sales Manager · Solvigo</small>
+            </span>
           </div>
         </div>
       </div>
+      <div className="hero-bottom">
+        <span>
+          {sv ? "ETT URVAL AV DET JAG BYGGER" : "A SELECTION OF WHAT I BUILD"}
+        </span>
+        <div className="focus-areas">
+          {t.disciplines.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+        <FiArrowDownRight aria-hidden="true" />
+      </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

@@ -1,97 +1,56 @@
-import { useEffect } from "react";
+﻿import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
+import { copy } from "../../data/copy";
 
-const content = {
-  sv: {
-    kicker: "Kontakt",
-    title: "Kontakta mig",
-    description:
-      "Skriv gärna ett meddelande här eller kontakta mig via LinkedIn.",
-    firstName: "Förnamn",
-    lastName: "Efternamn",
-    email: "E-post",
-    phone: "Telefonnummer",
-    message: "Meddelande",
-    placeholder: "Skriv ditt meddelande...",
-    submit: "Skicka",
-    sending: "Skickar...",
-  },
-  en: {
-    kicker: "Contact",
-    title: "Contact me",
-    description:
-      "Feel free to send me a message here or contact me via LinkedIn.",
-    firstName: "First name",
-    lastName: "Last name",
-    email: "Email",
-    phone: "Phone number",
-    message: "Message",
-    placeholder: "Write your message...",
-    submit: "Send",
-    sending: "Sending...",
-  },
-};
-
-const ContactMe = ({ language }) => {
+export default function ContactMe({ language }) {
+  const t = copy[language];
   const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xqapopdp");
-  const t = content[language];
-
   useEffect(() => {
-    if (state.succeeded) {
-      navigate("/thank-you");
-    }
+    if (state.succeeded) navigate("/thank-you");
   }, [state.succeeded, navigate]);
-
   return (
-    <section className="contact--section" id="Contact">
-      <div className="container contact__inner">
-        <div className="section-heading">
-          <p className="section-kicker">{t.kicker}</p>
-          <h2>{t.title}</h2>
-          <p className="section-description">{t.description}</p>
+    <section className="contact-section section-space" id="Contact">
+      <div className="container contact-grid">
+        <div className="contact-copy">
+          <p className="eyebrow">{t.contactEyebrow}</p>
+          <h2>
+            {t.contactTitle}
+            <br />
+            <em>{t.contactItalic}</em>
+            <span className="contact-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </h2>
+          <p>{t.contactIntro}</p>
+          <a
+            className="contact-email"
+            href="mailto:robin.m.e.vikstrom@gmail.com"
+          >
+            robin.m.e.vikstrom@gmail.com
+          </a>
         </div>
-
-        <form
-          className="contact--form--container"
-          onSubmit={handleSubmit}
-          method="POST"
-          action="https://formspree.io/f/xqapopdp"
-        >
+        <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
-            <label htmlFor="first-name" className="contact--label">
-              <span className="text-md">{t.firstName}</span>
+            <label>
+              {t.name}
               <input
-                type="text"
-                className="contact--input text-md"
-                name="first-name"
-                id="first-name"
+                name="name"
+                autoComplete="name"
                 required
+                maxLength="120"
+                disabled={state.submitting}
               />
             </label>
-
-            <label htmlFor="last-name" className="contact--label">
-              <span className="text-md">{t.lastName}</span>
+            <label>
+              {t.email}
               <input
-                type="text"
-                className="contact--input text-md"
-                name="last-name"
-                id="last-name"
-                required
-              />
-            </label>
-          </div>
-
-          <div className="form-row">
-            <label htmlFor="email" className="contact--label">
-              <span className="text-md">{t.email}</span>
-              <input
-                type="email"
-                className="contact--input text-md"
                 name="email"
-                id="email"
+                type="email"
+                autoComplete="email"
                 required
+                disabled={state.submitting}
               />
               <ValidationError
                 prefix={t.email}
@@ -99,27 +58,16 @@ const ContactMe = ({ language }) => {
                 errors={state.errors}
               />
             </label>
-
-            <label htmlFor="phone-number" className="contact--label">
-              <span className="text-md">{t.phone}</span>
-              <input
-                type="tel"
-                className="contact--input text-md"
-                name="phone-number"
-                id="phone-number"
-              />
-            </label>
           </div>
-
-          <label htmlFor="message" className="contact--label">
-            <span className="text-md">{t.message}</span>
+          <label>
+            {t.message}
             <textarea
-              className="contact--input text-md contact--textarea"
-              id="message"
               name="message"
-              rows="8"
-              placeholder={t.placeholder}
+              rows="4"
               required
+              maxLength="5000"
+              placeholder={t.placeholder}
+              disabled={state.submitting}
             />
             <ValidationError
               prefix={t.message}
@@ -127,20 +75,24 @@ const ContactMe = ({ language }) => {
               errors={state.errors}
             />
           </label>
-
-          <div>
-            <button
-              className="btn btn-primary contact--form--btn"
-              type="submit"
-              disabled={state.submitting}
-            >
-              {state.submitting ? t.sending : t.submit}
-            </button>
-          </div>
+          {state.errors && (
+            <p className="form-error" role="alert">
+              {t.formError}
+            </p>
+          )}
+          <button
+            type="submit"
+            className="button button-cream"
+            disabled={state.submitting}
+          >
+            {state.submitting ? t.sending : t.send}
+            <span aria-hidden="true">↗</span>
+          </button>
+          <span className="form-status" role="status">
+            {state.submitting ? t.sending : ""}
+          </span>
         </form>
       </div>
     </section>
   );
-};
-
-export default ContactMe;
+}

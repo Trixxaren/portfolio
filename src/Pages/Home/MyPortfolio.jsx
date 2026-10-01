@@ -1,83 +1,100 @@
-import { useEffect, useState } from "react";
-import portfolioData from "../../data/index.json";
+﻿import { useState } from "react";
+import { Link } from "react-router-dom";
+import { FiArrowUpRight, FiGrid } from "react-icons/fi";
+import { projects, statusLabels, projectStatus } from "../../data/projects";
+import ProjectCover from "./ProjectCover";
 
-const content = {
-  sv: {
-    kicker: "Projekt",
-    title: "Mina projekt",
-    description:
-      "Ett urval av projekt där jag arbetat med frontend, API:er, responsiv design och moderna utvecklingsverktyg.",
-    link: "Visa projekt",
-  },
-  en: {
-    kicker: "Projects",
-    title: "My projects",
-    description:
-      "A selection of projects where I have worked with frontend, APIs, responsive design, and modern development tools.",
-    link: "View project",
-  },
-};
-
-const MyPortfolio = ({ language }) => {
-  const [projects, setProjects] = useState([]);
-  const t = content[language];
-
-  useEffect(() => {
-    setProjects(portfolioData.portfolio);
-  }, []);
-
+export default function MyPortfolio({ language }) {
+  const [filter, setFilter] = useState("all");
+  const sv = language === "sv";
+  const visible = projects.filter(
+    (project) => filter === "all" || project.status === filter,
+  );
   return (
-    <section className="portfolio--section" id="MyPortfolio">
-      <div className="container portfolio__inner">
-        <div className="section-heading">
-          <p className="section-kicker">{t.kicker}</p>
-          <h2>{t.title}</h2>
-          <p className="section-description">{t.description}</p>
-        </div>
-
-        <div className="portfolio--section--container">
-          {projects.map((project) => (
-            <a
-              key={project.id}
-              href={project.link}
-              className="portfolio--section--card"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="portfolio--section--img">
-                <img src={`/${project.src}`} alt={project.title} />
-              </div>
-
-              <div className="portfolio--section--card--content">
-                <div className="portfolio-card__top">
-                  <h3 className="portfolio--section--title">
-                    {language === "en" && project.titleEn
-                      ? project.titleEn
-                      : project.title}
-                  </h3>
-                  <span className="portfolio--link">{t.link}</span>
-                </div>
-
-                <div className="portfolio__stack">
-                  {project.stack.map((item) => (
-                    <span key={item} className="portfolio__tag">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-
-                <p className="text-md">
-                  {language === "en" && project.descriptionEn
-                    ? project.descriptionEn
-                    : project.description}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
+    <section className="work-section container" id="MyPortfolio">
+      <div className="section-title-row">
+        <h2>
+          <FiGrid />
+          {sv ? "Projekt & experiment" : "Projects & experiments"}
+          <span>{projects.length}</span>
+        </h2>
+        <span className="section-note">
+          {sv
+            ? "Egna idéer, omsatta i projekt."
+            : "Personal ideas, turned into projects."}
+        </span>
       </div>
+      <div
+        className="project-filters"
+        role="group"
+        aria-label={sv ? "Filtrera projekt" : "Filter projects"}
+      >
+        {Object.entries(statusLabels[language]).map(([value, label]) => (
+          <button
+            key={value}
+            aria-pressed={filter === value}
+            onClick={() => setFilter(value)}
+          >
+            {label}
+            <span>
+              {value === "all"
+                ? projects.length
+                : projects.filter((p) => p.status === value).length}
+            </span>
+          </button>
+        ))}
+      </div>
+      <div className="project-grid">
+        {visible.map((project) => (
+          <article className="project-card" key={project.slug}>
+            <Link
+              className="project-card-link"
+              to={"/projects/" + project.slug}
+              aria-label={(sv ? "Läs om " : "Explore ") + project.title}
+            >
+              <ProjectCover project={project} language={language} />
+              <div className="project-card-body">
+                <div className="project-card-meta">
+                  <span className={"status status-" + project.status}>
+                    <i />
+                    {projectStatus[language][project.status]}
+                  </span>
+                  <span className="project-kind">
+                    {project.kind === "case"
+                      ? "CASE"
+                      : project.kind === "experiment"
+                        ? sv
+                          ? "UTFORSKNING"
+                          : "EXPLORATION"
+                        : project.kind === "concept"
+                          ? sv
+                            ? "PRODUKTIDÉ"
+                            : "PRODUCT IDEA"
+                          : "FRONTEND"}
+                  </span>
+                </div>
+                <h3>
+                  {project.title}
+                  <FiArrowUpRight />
+                </h3>
+                <p>{project[language].summary}</p>
+                <ul className="tags">
+                  {(Array.isArray(project.tags)
+                    ? project.tags
+                    : project.tags[language]
+                  ).map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+      <p className="filter-count" role="status">
+        {sv ? "Visar" : "Showing"} {visible.length} {sv ? "av" : "of"}{" "}
+        {projects.length} {sv ? "projekt" : "projects"}
+      </p>
     </section>
   );
-};
-
-export default MyPortfolio;
+}

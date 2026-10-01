@@ -1,155 +1,76 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
-
-const content = {
-  sv: {
-    home: "Hem",
-    skills: "Kunskaper",
-    about: "Om mig",
-    projects: "Projekt",
-    contact: "Kontakta mig",
-    brand: "Robin Vikström",
-    toggle: "EN",
-  },
-  en: {
-    home: "Home",
-    skills: "Skills",
-    about: "About",
-    projects: "Projects",
-    contact: "Contact me",
-    brand: "Robin Vikström",
-    toggle: "SV",
-  },
-};
-
-const Navbar = ({ language, toggleLanguage }) => {
-  const [navActive, setNavActive] = useState(false);
-  const t = content[language];
-
-  const toggleNav = () => setNavActive((prev) => !prev);
-  const closeMenu = () => setNavActive(false);
-
+﻿import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
+import { copy } from "../../data/copy";
+export default function Navbar({ language, toggleLanguage }) {
+  const t = copy[language],
+    [open, setOpen] = useState(false),
+    menu = useRef(null),
+    trigger = useRef(null);
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 900) {
-        closeMenu();
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+    if (open) menu.current?.querySelector("a")?.focus();
+  }, [open]);
   return (
-    <nav className="navbar">
-      <div className="container navbar__inner">
-        <a href="/" className="navbar__brand" aria-label="Startsida">
-          <img className="logotype" src="/favicon-32x32.png" alt="RV Logo" />
-          <span>{t.brand}</span>
-        </a>
-
-        <button
-          className={`nav__hamburger ${navActive ? "active" : ""}`}
-          onClick={toggleNav}
-          aria-label="Öppna meny"
-          aria-expanded={navActive}
-          aria-controls="navMenu"
-          type="button"
+    <header className="site-header" id="top">
+      <a className="skip-link" href="#main">
+        {t.skip}
+      </a>
+      <div className="container header-inner">
+        <Link to="/" className="profile-brand" onClick={() => setOpen(false)}>
+          robin vikström<span>.</span>
+        </Link>
+        <nav
+          id="main-navigation"
+          className={open ? "main-nav is-open" : "main-nav"}
+          ref={menu}
+          aria-label={language === "sv" ? "Huvudnavigation" : "Main navigation"}
+          onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              setOpen(false);
+              trigger.current?.focus();
+            }
+          }}
         >
-          <span className="nav__hamburger__line"></span>
-          <span className="nav__hamburger__line"></span>
-          <span className="nav__hamburger__line"></span>
-        </button>
-
-        <div
-          id="navMenu"
-          className={`navbar--items ${navActive ? "active" : ""}`}
-        >
-          <ul>
-            <li>
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy
-                smooth
-                offset={-80}
-                duration={500}
-                to="heroSection"
-                className="navbar--content"
-              >
-                {t.home}
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy
-                smooth
-                offset={-80}
-                duration={500}
-                to="skills"
-                className="navbar--content"
-              >
-                {t.skills}
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy
-                smooth
-                offset={-80}
-                duration={500}
-                to="AboutMe"
-                className="navbar--content"
-              >
-                {t.about}
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={closeMenu}
-                activeClass="navbar--active-content"
-                spy
-                smooth
-                offset={-80}
-                duration={500}
-                to="MyPortfolio"
-                className="navbar--content"
-              >
-                {t.projects}
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="navbar__actions">
+          {t.nav.map((label, i) => (
+            <Link
+              key={label}
+              to={"/" + ["#MyPortfolio", "#AboutMe", "#Contact"][i]}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+          <a
+            className="nav-github"
+            href="https://github.com/Trixxaren"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub <FiArrowUpRight />
+          </a>
+        </nav>
+        <div className="header-controls">
           <button
-            type="button"
-            className="btn btn-outline-primary navbar__lang"
+            className="language-button"
             onClick={toggleLanguage}
+            aria-label={
+              language === "sv" ? "Switch to English" : "Byt till svenska"
+            }
           >
-            {t.toggle}
+            {language === "sv" ? "EN" : "SV"}
           </button>
-
-          <Link
-            onClick={closeMenu}
-            activeClass="navbar--active-content"
-            spy
-            smooth
-            offset={-80}
-            duration={500}
-            to="Contact"
-            className="btn btn-primary navbar__cta"
+          <button
+            className="menu-button"
+            ref={trigger}
+            aria-expanded={open}
+            aria-controls="main-navigation"
+            aria-label={open ? t.close : t.menu}
+            onClick={() => setOpen(!open)}
           >
-            {t.contact}
-          </Link>
+            {open ? <FiX /> : <FiMenu />}
+          </button>
         </div>
       </div>
-    </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}

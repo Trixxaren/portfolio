@@ -1,25 +1,16 @@
-const content = {
-  sv: {
-    title: "Tack för ditt meddelande",
-    text: "Jag återkommer så snart jag kan. Ha en fin dag!",
-  },
-  en: {
-    title: "Thank you for your message",
-    text: "I will get back to you as soon as I can. Have a great day!",
-  },
-};
-
-const ThankYou = ({ language }) => {
-  const t = content[language];
-
+﻿import { Link } from "react-router-dom";
+import { copy } from "../../data/copy";
+export default function ThankYou({ language, notFound = false }) {
+  const t = copy[language];
   return (
-    <section className="thank-you-section">
-      <div className="container thank-you__inner">
-        <h1>{t.title}</h1>
-        <p className="text-lg">{t.text}</p>
-      </div>
+    <section className="thank-you container">
+      <p className="eyebrow">{notFound ? "404" : "ROBIN VIKSTRÖM"}</p>
+      <h1>{notFound ? t.notFound : t.thanks}</h1>
+      <p>{notFound ? t.notFoundText : t.thanksText}</p>
+      <Link className="button button-primary" to="/">
+        {t.home}
+        <span aria-hidden="true">↗</span>
+      </Link>
     </section>
   );
-};
-
-export default ThankYou;
+}

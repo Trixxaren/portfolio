@@ -1,62 +1,57 @@
-const content = {
-  sv: {
-    kicker: "Om mig",
-    title: "Frontend med affärsförståelse",
-    p1: "Jag är frontendutvecklare med erfarenhet inom försäljning, kundrelationer och moderna digitala lösningar. Just nu studerar jag Frontendutveckling på JENSEN Yrkeshögskola.",
-    p2: "Tidigare arbetade jag som Key Account Manager på Viaplay Group Radio, där jag ansvarade för strategiska samarbeten och affärsdrivna projekt tillsammans med några av Sveriges största företag.",
-    p3: "Min bakgrund har gett mig starka färdigheter inom kommunikation, behovsanalys och att driva arbete från idé till färdig lösning. Idag kombinerar jag den erfarenheten med teknisk förståelse för att bygga moderna och användarvänliga webbupplevelser.",
-button: "Ladda ner CV",
-    cvLink:
-      "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
-  },
-  en: {
-    kicker: "About me",
-    title: "Frontend with business understanding",
-    p1: "I’m a frontend developer with experience in sales, customer relations, and modern digital solutions. I’m currently studying Frontend Development at JENSEN Higher Vocational Education.",
-    p2: "Previously, I worked as a Key Account Manager at Viaplay Group Radio, where I was responsible for strategic partnerships and business-driven projects together with some of Sweden’s largest companies.",
-    p3: "My background has given me strong skills in communication, needs analysis, and driving projects from idea to finished solution. Today, I combine that experience with technical understanding to build modern and user-friendly web experiences.",
-button: "Download CV",
-    cvLink:
-      "https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link",
-  },
-};
-
-const AboutMe = ({ language }) => {
-  const t = content[language];
-
+﻿import { FiArrowUpRight, FiBookOpen } from "react-icons/fi";
+import { copy } from "../../data/copy";
+export default function AboutMe({ language }) {
+  const t = copy[language],
+    sv = language === "sv";
   return (
-    <section id="AboutMe" className="about--section">
-      <div className="container about__inner">
-        <div className="about--section--img">
-          <img src="/utomhus.png" alt="Robin utomhus" />
+    <section className="about-section container" id="AboutMe">
+      <div className="section-title-row">
+        <h2>{sv ? "Lite mer om mig" : "A little more about me"}</h2>
+        <span className="eyebrow">02 / ROBIN</span>
+      </div>
+      <div className="about-grid">
+        <div className="about-prose">
+          <h3>{t.aboutTitle}</h3>
+          <p>{t.aboutP1}</p>
+          <p>{t.aboutP2}</p>
+          <a
+            className="text-link"
+            href={t.cvLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t.cv}
+            <FiArrowUpRight />
+          </a>
         </div>
-
-        <div className="about__content">
-          <div className="section-heading section-heading--left">
-            <p className="section-kicker">{t.kicker}</p>
-            <h2>{t.title}</h2>
+        <aside className="learning-note">
+          <div className="learning-note-header">
+            <FiBookOpen />
+            <span>{t.learningNow}</span>
           </div>
-
-          <div className="about__text">
-            <p className="text-md">{t.p1}</p>
-            <p className="text-md">{t.p2}</p>
-            <p className="text-md">{t.p3}</p>
+          <ul>
+            {t.learningAreas.map((item, i) => (
+              <li key={item}>
+                <span>0{i + 1}</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="note-foot">
+            <span className="live-dot" />
+            {sv ? "Lär genom att bygga" : "Learning by building"}
           </div>
-
-          <div className="about__actions">
-            <a
-              href={t.cvLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-black"
-            >
-              {t.button}
-            </a>
-          </div>
-        </div>
+        </aside>
+      </div>
+      <div className="approach-grid">
+        {t.approach.map(([title, text], i) => (
+          <article key={title}>
+            <span className="approach-number">0{i + 1}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
       </div>
     </section>
   );
-};
-
-export default AboutMe;
+}
