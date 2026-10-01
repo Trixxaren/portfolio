@@ -57,7 +57,7 @@ export default function Navbar({ language, toggleLanguage }) {
               language === "sv" ? "Switch to English" : "Byt till svenska"
             }
           >
-            {language === "sv" ? "EN" : "SV"}
+            {language === "sv" ? "English" : "Svenska"}
           </button>
           <button
             className="menu-button"

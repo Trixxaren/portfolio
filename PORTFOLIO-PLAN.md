@@ -60,3 +60,18 @@ Robin föredrar den varma, ljusa versionen men vill ta bort lila/vinrött.
 Hela gränssnittet använder nu varmvit, beige, dämpad orange och varm brun text.
 Det gäller även projektdetaljer, formulär, statusmarkörer och favicon.
 Formulärfält har tydligare kantkontrast. Layout och innehåll behålls.
+
+## UX-iteration efter checkpoint 09888d2
+
+Antagen målgrupp: möjliga arbetsgivare och samarbetspartners. Huvudmål: förstå
+Robins bidrag genom projekten. Primär handling: läsa ett projekt. Flöde:
+presentation → projekt → problem/lösning/roll → kontakt.
+
+Behåll den godkända orange/beige paletten. Ta bort onödiga projektfilter
+(fem projekt), räknare, dubbla pilikoner och dekorativ kompetensrad.
+Tydliga textlänkar till projekt, läsbarare text och större klickytor.
+Projektsidans arkitektur blir en lugn läsordning istället för fler kort.
+
+Hypotes: mindre visuellt brus gör det enklare att välja ett projekt.
+Testförslag: be tre relevanta personer hitta ett projekt och förklara Robins
+roll utan hjälp; notera tvekan, uppgiftsframgång och förståelse. Inte uppmätt än.

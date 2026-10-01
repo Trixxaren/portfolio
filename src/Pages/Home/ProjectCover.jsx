@@ -1,4 +1,4 @@
-﻿import { FiArrowUpRight, FiCheck, FiMessageSquare } from "react-icons/fi";
+﻿import { FiCheck, FiMessageSquare } from "react-icons/fi";
 
 export default function ProjectCover({ project, language, detail = false }) {
   const sv = language === "sv";
@@ -87,9 +87,6 @@ export default function ProjectCover({ project, language, detail = false }) {
       ) : (
         <span className="placeholder-title">{project.title}</span>
       )}
-      <span className="cover-corner">
-        <FiArrowUpRight />
-      </span>
     </div>
   );
 }

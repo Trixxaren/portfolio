@@ -52,17 +52,6 @@ export default function HeroSection({ language }) {
           </div>
         </div>
       </div>
-      <div className="hero-bottom">
-        <span>
-          {sv ? "ETT URVAL AV DET JAG BYGGER" : "A SELECTION OF WHAT I BUILD"}
-        </span>
-        <div className="focus-areas">
-          {t.disciplines.map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
-        <FiArrowDownRight aria-hidden="true" />
-      </div>
     </section>
   );
 }
