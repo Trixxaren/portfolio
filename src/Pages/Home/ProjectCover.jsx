@@ -2,7 +2,7 @@
 
 export default function ProjectCover({ project, language, detail = false }) {
   const sv = language === "sv";
-  if (project.cover === "sales")
+  if (project.cover === "sales" && !project.screenshots?.length)
     return (
       <div
         className={
@@ -18,7 +18,7 @@ export default function ProjectCover({ project, language, detail = false }) {
           <div className="mini-app-bar">
             <span className="mini-logo">S</span>
             <strong>Sales-OS</strong>
-            <span className="mini-app-label">WORKSPACE</span>
+            <span className="mini-app-label">CRM + BUSINESS OS</span>
           </div>
           <div className="mini-app-body">
             <div className="mini-app-heading">
@@ -36,14 +36,14 @@ export default function ProjectCover({ project, language, detail = false }) {
                   <FiCheck /> {sv ? "Att granska" : "To review"}
                 </span>
                 <div className="mini-task">
-                  <i>K</i>
+                  <i>2</i>
                   <strong>
                     {sv ? "Ett nytt mejlförslag" : "A new email draft"}
                   </strong>
                   <p>
                     {sv
-                      ? "Karin har förberett ett utkast."
-                      : "Karin prepared a draft."}
+                      ? "Agent 2 har förberett ett utkast."
+                      : "Agent 2 prepared a draft."}
                   </p>
                   <b>{sv ? "Väntar på dig" : "Waiting for you"}</b>
                 </div>
@@ -53,7 +53,7 @@ export default function ProjectCover({ project, language, detail = false }) {
                   <FiMessageSquare /> {sv ? "Dialoger" : "Conversations"}
                 </span>
                 <div className="mini-task">
-                  <i>B</i>
+                  <i>3</i>
                   <strong>
                     {sv ? "Ett positivt svar" : "A positive reply"}
                   </strong>

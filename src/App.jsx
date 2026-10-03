@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Home from "./Pages/Home/Homescreen";
+import MotionEffects from "./Pages/Home/MotionEffects";
 import Navbar from "./Pages/Home/Navbar";
 import Footer from "./Pages/Home/Footer";
 import ThankYou from "./Pages/Home/ThankYou";
@@ -91,6 +92,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <PageEffects language={language} />
+      <MotionEffects />
       <Navbar
         language={language}
         toggleLanguage={() =>

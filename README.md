@@ -51,9 +51,10 @@ Sales-OS is Robin’s own build, per his latest clarification. It is shown as an
 ongoing case, alongside other projects. Concepts are explicitly labelled.
 Illustrations use sample data, not internal customer information.
 
-Analytics belongs to the ongoing Sales-OS case. CSV/JSON import and AI questions
-are described as ideas for that module, not completed features. The project list
-contains the original four projects plus Sales-OS.
+Sales-OS is an ongoing CRM + Business OS. The stack, agent roles and rule-based
+controls come from Robin’s updated project description. Analytics is part of the
+same system; effectiveness claims and code/test counts are not presented as
+independently verified results. The original four projects remain.
 Do not infer completed features, architecture decisions or measurable outcomes.
 
 ## Contact and deployment
@@ -67,3 +68,28 @@ The old `/projects/solvigo-sales-os` path redirects to `/projects/sales-os`.
 
 Local commits are allowed. **Do not push or deploy without Robin’s explicit
 approval.** The existing live address is https://robinvikstrom.netlify.app/.
+
+## Screenshot galleries
+
+`ScreenshotGallery.jsx` renders the `screenshots` array with thumbnails and a
+keyboard-accessible full-size dialog. Add local image paths and both captions
+to the project record; the first image is also used on the project card.
+
+Captured from the public demos on 2026-10-02:
+- Quizmaster: https://quizmastertrixx.netlify.app/ (categories and question)
+- Hittarecept: https://hittarecept.netlify.app/ (discovery and recipe details)
+- Konnect: https://konnectchat.netlify.app/login (login and registration)
+
+PNG captures are in `public/screenshots/`. No authentication or submissions
+were performed. Six Sales-OS demo images are in
+`public/screenshots/sales-os/`, with the dashboard first as the project cover.
+All business and personal data in these images is fictional. They were edited
+with the built-in image tool; layouts and typography may differ slightly from
+the source screenshots. Captions in both languages label them as demo data.
+The seventh gallery image (development sign-in) and the original screenshots
+are excluded from public assets and the production build. Agent names use
+Agent 1–5 throughout the case. No Gmail attachment URLs are stored in the app.
+
+`MotionEffects.jsx` animates sections once when entering the viewport. Content
+stays visible without animation support, and reduced-motion preferences disable
+these effects.

@@ -75,3 +75,23 @@ Projektsidans arkitektur blir en lugn läsordning istället för fler kort.
 Hypotes: mindre visuellt brus gör det enklare att välja ett projekt.
 Testförslag: be tre relevanta personer hitta ett projekt och förklara Robins
 roll utan hjälp; notera tvekan, uppgiftsframgång och förståelse. Inte uppmätt än.
+
+## Bilder, Sales-OS och rörelse — 2026-10-02
+
+Behåll designen från 6b11802. Lägg till färska raka skärmbilder från de tre
+publika demosidorna, klickbara gallerier med bildvisare och diskret rörelse.
+Sales-OS är ett eget CRM + Business OS: Next.js 15, TypeScript, Prisma, Postgres,
+fem agenter, mänskliga mejlgodkännanden, regelbaserad autonomi och analys.
+Uppgifterna kommer från Robin. Inga verifierade effektmått hävdas.
+
+## Demodata i Sales-OS — 2026-10-03
+
+Robin vill ersätta verkliga uppgifter i samtliga Sales-OS-bilder med fiktiv
+demodata och numrera agenterna Agent 1–5. Bild 7/7 tolkas som inloggningen
+sist i portfolions galleri och tas bort. Sex bildredigeringar ersätter
+originalen; företag, personer, kontaktuppgifter, datum, belopp och loggar
+är påhittade. Gränssnittets generella etiketter behålls. Bildtexter på båda
+språken markerar demodata. Originalen ska inte finnas i public eller dist.
+Originalfilerna i Downloads ändras inte.
+
+Behåll designen från 6b11802. Ingen push eller deploy utan Robins godkännande.

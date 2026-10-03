@@ -11,9 +11,14 @@ export const projects = [
     demo: "https://quizmastertrixx.netlify.app/",
     screenshots: [
       {
-        src: "/quizmaster-screen.png",
-        sv: "Quizmaster — startsida",
-        en: "Quizmaster — home screen",
+        src: "/screenshots/quizmaster-categories.png",
+        sv: "Välj bland quizets kategorier",
+        en: "Choose a quiz category",
+      },
+      {
+        src: "/screenshots/quizmaster-question.png",
+        sv: "En historiefråga med svarsalternativ och timer",
+        en: "A history question with answers and a timer",
       },
     ],
     sv: {
@@ -56,9 +61,19 @@ export const projects = [
     demo: "https://hittarecept.netlify.app/",
     screenshots: [
       {
-        src: "/hittarecept.png",
-        sv: "Rekommenderade recept i Hittarecept",
-        en: "Recommended recipes in Hittarecept",
+        src: "/screenshots/hittarecept-discover.png",
+        sv: "Upptäck recept och sök efter maträtter",
+        en: "Discover recipes and search for dishes",
+      },
+      {
+        src: "/screenshots/hittarecept-recipe.png",
+        sv: "Receptdetalj: Chicken Handi",
+        en: "Recipe detail: Chicken Handi",
+      },
+      {
+        src: "/screenshots/hittarecept-instructions.png",
+        sv: "Ingredienser och tillagningssteg",
+        en: "Ingredients and cooking instructions",
       },
     ],
     sv: {
@@ -109,9 +124,14 @@ export const projects = [
     demo: "https://konnectchat.netlify.app/",
     screenshots: [
       {
-        src: "/konnect-screen.png",
-        sv: "Konnect ChatApp — startsida",
-        en: "Konnect ChatApp — home screen",
+        src: "/screenshots/konnect-login.png",
+        sv: "Logga in på Konnect",
+        en: "Sign in to Konnect",
+      },
+      {
+        src: "/screenshots/konnect-register.png",
+        sv: "Skapa ett konto i Konnect",
+        en: "Create a Konnect account",
       },
     ],
     sv: {
@@ -213,57 +233,127 @@ export const projects = [
     status: "ongoing",
     kind: "case",
     cover: "sales",
-    tags: ["Fullstack", "AI-workflows", "CRM"],
+    tags: ["Fullstack", "AI-workflows", "CRM + Business OS"],
     github: null,
     demo: null,
-    screenshots: [],
+    screenshots: [
+      {
+            "src": "/screenshots/sales-os/demo-dashboard.png",
+            "sv": "Översikt över pipeline och aktiviteter · Fiktiv demodata",
+            "en": "Overview of pipeline and activities · Fictional demo data"
+      },
+      {
+            "src": "/screenshots/sales-os/demo-pipeline.png",
+            "sv": "Affärsmöjligheter och säljsteg · Fiktiv demodata",
+            "en": "Opportunities and sales stages · Fictional demo data"
+      },
+      {
+            "src": "/screenshots/sales-os/demo-companies.png",
+            "sv": "Företagsregister med kontakter · Fiktiv demodata",
+            "en": "Company directory with contacts · Fictional demo data"
+      },
+      {
+            "src": "/screenshots/sales-os/demo-company-detail.png",
+            "sv": "Kontakter och aktivitetshistorik · Fiktiv demodata",
+            "en": "Contacts and activity history · Fictional demo data"
+      },
+      {
+            "src": "/screenshots/sales-os/demo-opportunity-detail.png",
+            "sv": "Kvalificering, research och nästa steg · Fiktiv demodata",
+            "en": "Qualification, research, and next steps · Fictional demo data"
+      },
+      {
+            "src": "/screenshots/sales-os/demo-tasks.png",
+            "sv": "Uppgifter och uppföljningar · Fiktiv demodata",
+            "en": "Tasks and follow-ups · Fictional demo data"
+      }
+],
     sv: {
       summary:
         "Från research till uppföljning. Ett gemensamt workflow för B2B-försäljning, med AI-agenter och mänskliga beslut.",
       problem:
         "Research, prospektering, mejl och uppföljningar innebär många manuella moment. Information och nästa steg behöver hänga ihop för att säljaren ska kunna fokusera på kunddialogen.",
       solution:
-        "Jag har byggt Sales-OS som en fullstack-app: ett CRM med databas, leadmotor och automatiserade arbetsflöden. Research, outreach, godkännanden, uppföljning och analys samlas i samma system. AI-agenter förbereder arbetet, medan jag fattar besluten.",
+        "Jag har byggt Sales-OS som Solvigos interna CRM + Business OS. Fullstack-appen samlar leadmotor, AI-agenter, pipeline, uppgifter och analys i ett gemensamt arbetsflöde. Regelverket styr vad agenterna får göra själva. En människa måste alltid godkänna mejlen innan de skickas.",
       role: "Eget bygge: från behovsanalys, produktidé och arbetsflöden till UX, AI-assisterad implementation, testning och vidareutveckling. Jag använder min erfarenhet från försäljning för att definiera krav och testa verkliga scenarier.",
       technology: [
-        "AI-agenter och strukturerade svar",
-        "Databas och tillståndshantering",
-        "Bakgrundsschemaläggning",
-        "Gmail-trådar och server-side attribution",
-        "AI-assisterad utveckling",
+        "Next.js 15",
+        "TypeScript",
+        "Prisma",
+        "Postgres",
+        "AI-agenter och automatiserade arbetsflöden",
+      ],
+      capabilities: [
+        [
+          "CRM & pipeline",
+          "Företag, kontakter och affärer samlas i en pipeline med åtta steg, från Ny till Vunnen eller Förlorad.",
+        ],
+        [
+          "Dagens beslut",
+          "Översikten lyfter det som behöver uppmärksamhet. Godkännandekön och uppgifterna gör nästa steg tydligt.",
+        ],
+        [
+          "Business OS",
+          "Partnerskap, LinkedIn-utkast och en offertkalkylator finns i samma system, med svenskt och engelskt gränssnitt.",
+        ],
+        [
+          "Mål & analys",
+          "Säljmål och prognos ger överblick. Signaler och svar sparas för att följa upp hur prospektering och outreach fungerar.",
+        ],
+      ],
+      agents: [
+        [
+          "Agent 1 · prospektering",
+          "Hittar bolag utifrån signaler som förvärv och systembyten, researchar och verifierar beslutsfattare. Ett regelverk, inte AI, avgör om fallet får godkännas automatiskt.",
+        ],
+        [
+          "Agent 2 · outreach",
+          "Skriver första mejlet och uppföljningarna. Utskicken väntar på en människas godkännande.",
+        ],
+        [
+          "Agent 3 · svar & pipeline",
+          "Klassificerar svar och flyttar affären till rätt steg, exempelvis Svarat, Möte eller Förlorad.",
+        ],
+        ["Agent 4 · partnerskap", "Sköter partnerspåret."],
+        [
+          "Agent 5 · LinkedIn",
+          "Tar fram utkast till LinkedIn-inlägg för mänsklig granskning.",
+        ],
       ],
       architecture: [
         [
-          "Gränssnitt, backend & databas",
-          "CRM-vyerna samlar leads, pipeline och uppgifter. Backend hanterar arbetsflöden, och databasen håller ihop information och status.",
+          "Gränssnitt",
+          "Next.js och TypeScript kopplar samman CRM-vyer, godkännanden, uppgifter och analys.",
         ],
-        ["Uffe", "Identifierar och kvalificerar företag."],
         [
-          "Bosse",
-          "Researchar företag, tolkar svar och hittar relevant kontext.",
+          "API & tjänster",
+          "Backend hanterar affärslogik, behörigheter och arbetsflöden mellan agenter och människor.",
         ],
-        ["Karin", "Förbereder första mejlet, uppföljningar och återkontakt."],
         [
-          "Mänsklig kontroll",
-          "Godkänner utskick, hanterar osäkra lägen och driver dialogen vidare.",
+          "Databas",
+          "Prisma och Postgres håller ihop företag, affärer, aktiviteter och tillstånd genom hela flödet.",
+        ],
+        [
+          "Agenter & styrning",
+          "Varje agent har en egen roll och API-nyckel. Regelbaserade kontroller avgör när autonomi är tillåten och när en människa behöver ta över.",
         ],
       ],
       decisions: [
         [
-          "Människans arbetskö",
-          "Agenternas interna uppgifter hålls separata från det användaren behöver agera på.",
+          "Mänskligt godkännande",
+          "Bara människor kan godkänna mejl. Agenternas förberedelser och användarens beslut är separata steg.",
         ],
         [
           "Säkra utskick",
-          "Ett atomärt claim-flöde förhindrar att två processer skickar samma godkända mejl. Osäkra utskick går till manuell granskning.",
+          "Låsningar skyddar mot dubbelutskick och nya kontakter med personer som redan tackat nej. Dubbletter kontrolleras på organisationsnummer och domän.",
         ],
         [
-          "Skydd per mottagare",
-          "Normaliserad e-postadress används för att stoppa dubbla första kontakter och nya utskick till personer som tackat nej.",
+          "Granskningsbar autonomi",
+          "Agent 1 Autonomy V1 använder tydliga regler för automatiska godkännanden i prospekteringen. Besluten går att granska i efterhand.",
         ],
         [
           "Mät innan du optimerar",
-          "Ett CONTROL/V2-experiment jämför outreach-strategier. Svar, positiva svar, avböjanden och möten följs upp innan fler slutsatser dras.",
+          "Mejlvarianterna CONTROL, V2 och V3 används i experiment, med V3 som aktuell variant. Triggertyp, sökmetod och svarstyp sparas för analys.",
         ],
       ],
       learning: [
@@ -271,9 +361,9 @@ export const projects = [
         "UX handlar också om att välja vilken komplexitet användaren ska behöva se.",
         "Strukturerade beslut och tydliga stoppvillkor är viktiga när AI ingår i ett arbetsflöde.",
       ],
-      next: "Pågående vidareutveckling: djupare analys av budskap och branscher. CSV/JSON-import, fler filter och AI-baserade frågor till försäljningsdata är idéer för analysdelen i Sales-OS, inte ett separat projekt eller färdiga funktioner.",
+      next: "Fortsatt utveckling av arbetsflöden och analys inom samma system. Den insamlade datan ska användas för att undersöka vilka signaler och budskap som ger svar.",
       analytics:
-        "Översikt, pipeline, säljmål och prognoser hör till samma CRM. Outreach följs upp genom svar, positiva svar, avböjanden och möten. Analysen ska hjälpa till att förstå vad som händer mellan research och uppföljning.",
+        "Översikt, säljmål, pipeline och prognoser hör till samma CRM. Experimentdata kopplar samman prospekteringens signaler med mejlvariant och svarstyp, så att det går att undersöka vad som händer från research till uppföljning.",
     },
     en: {
       summary:
@@ -281,47 +371,83 @@ export const projects = [
       problem:
         "Research, prospecting, emails, and follow-ups involve many manual steps. Information and next actions need to connect so the salesperson can focus on the customer conversation.",
       solution:
-        "I built Sales-OS as a fullstack application: a CRM with a database, lead engine, and automated workflows. Research, outreach, approvals, follow-ups, and analysis live in one system. AI agents prepare the work while I make the decisions.",
+        "I built Sales-OS as Solvigo’s internal CRM + Business OS. The fullstack app brings a lead engine, AI agents, pipeline, tasks, and analytics into one workflow. Rules govern what agents may do independently. A person must always approve emails before they are sent.",
       role: "My own build: from needs analysis, product concept, and workflows to UX, AI-assisted implementation, testing, and iteration. I use my sales experience to define requirements and test real scenarios.",
       technology: [
-        "AI agents and structured outputs",
-        "Database and state management",
-        "Background scheduling",
-        "Gmail threads and server-side attribution",
-        "AI-assisted development",
+        "Next.js 15",
+        "TypeScript",
+        "Prisma",
+        "Postgres",
+        "AI agents and automated workflows",
+      ],
+      capabilities: [
+        [
+          "CRM & pipeline",
+          "Companies, contacts, and opportunities connect through an eight-stage pipeline, from New to Won or Lost.",
+        ],
+        [
+          "Daily decisions",
+          "The overview highlights what needs attention. The approval queue and tasks make the next action clear.",
+        ],
+        [
+          "Business OS",
+          "Partnerships, LinkedIn drafts, and a quote calculator share one system, with a Swedish and English interface.",
+        ],
+        [
+          "Targets & analytics",
+          "Sales targets and forecasts provide an overview. Signals and replies are recorded to track how prospecting and outreach work.",
+        ],
+      ],
+      agents: [
+        [
+          "Agent 1 · prospecting",
+          "Finds companies through signals such as acquisitions and system changes, researches them, and verifies decision-makers. Rules, not AI, determine whether a case can be approved automatically.",
+        ],
+        [
+          "Agent 2 · outreach",
+          "Drafts the first email and follow-ups. Messages wait for a person’s approval before sending.",
+        ],
+        [
+          "Agent 3 · replies & pipeline",
+          "Classifies replies and moves opportunities to the appropriate stage, such as Replied, Meeting, or Lost.",
+        ],
+        ["Agent 4 · partnerships", "Handles the partnership workflow."],
+        ["Agent 5 · LinkedIn", "Prepares LinkedIn post drafts for human review."],
       ],
       architecture: [
         [
-          "Interface, backend & database",
-          "CRM views bring together leads, pipeline, and tasks. The backend handles workflows, while the database connects information and state.",
+          "Interface",
+          "Next.js and TypeScript connect CRM views, approvals, tasks, and analytics.",
         ],
-        ["Uffe", "Finds and qualifies companies."],
         [
-          "Bosse",
-          "Researches companies, interprets replies, and gathers context.",
+          "API & services",
+          "The backend handles business logic, permissions, and workflows between agents and people.",
         ],
-        ["Karin", "Drafts first contacts, follow-ups, and re-engagement."],
         [
-          "Human control",
-          "Approves messages, handles uncertainty, and takes conversations forward.",
+          "Database",
+          "Prisma and Postgres connect companies, opportunities, activities, and state throughout the workflow.",
+        ],
+        [
+          "Agents & governance",
+          "Each agent has its own role and API key. Rule-based checks determine when autonomy is allowed and when a person needs to take over.",
         ],
       ],
       decisions: [
         [
-          "A work queue for people",
-          "Internal agent tasks stay separate from what the user needs to act on.",
+          "Human approval",
+          "Only people can approve emails. Agent preparation and user decisions are separate steps.",
         ],
         [
           "Safe sending",
-          "An atomic claim flow prevents two processes from sending the same approved email. Uncertain sends go to human review.",
+          "Locks guard against duplicate sends and further contact with people who have declined. Company registration numbers and domains are checked for duplicates.",
         ],
         [
-          "Recipient-level protection",
-          "Normalised email addresses help prevent duplicate first contacts and further outreach to people who declined.",
+          "Auditable autonomy",
+          "Agent 1 Autonomy V1 uses explicit rules for automatic prospecting approvals. Decisions can be reviewed afterwards.",
         ],
         [
           "Measure before optimising",
-          "A CONTROL/V2 experiment compares outreach strategies. Replies, positive responses, declines, and meetings inform further decisions.",
+          "Email variants CONTROL, V2, and V3 support experiments, with V3 the current variant. Trigger type, search method, and reply type are recorded for analysis.",
         ],
       ],
       learning: [
@@ -329,9 +455,9 @@ export const projects = [
         "UX includes deciding how much system complexity the user needs to see.",
         "Structured decisions and clear stopping conditions matter when AI is part of a workflow.",
       ],
-      next: "Ongoing development: deeper analysis of messaging and industries. CSV/JSON import, additional filters, and AI-powered questions about sales data are ideas for the Sales-OS analytics module, not a separate project or finished features.",
+      next: "Continued development of workflows and analytics within the same system. The collected data will be used to investigate which signals and messages lead to replies.",
       analytics:
-        "Overview, pipeline, sales targets, and forecasts belong to the same CRM. Outreach is tracked through replies, positive responses, declines, and meetings.",
+        "Overview, sales targets, pipeline, and forecasts belong to the same CRM. Experiment data connects prospecting signals with email variants and reply types, making it possible to examine the journey from research to follow-up.",
     },
   },
 ];
