@@ -1,12 +1,73 @@
 ﻿import { Link } from "react-router-dom";
-import { useState } from "react";
-import { FiArrowRight } from "react-icons/fi";
+import { useEffect, useRef, useState } from "react";
+import { flushSync } from "react-dom";
+import { FiArrowRight, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { projects, projectStatus } from "../../data/projects";
 import ProjectCover from "./ProjectCover";
 export default function MyPortfolio({ language }) {
   const sv = language === "sv";
   const [showAll, setShowAll] = useState(false);
+  const grid = useRef(null);
+  const toggle = useRef(null);
+  const animation = useRef(null);
+  const animating = useRef(false);
   const visibleProjects = showAll ? projects : projects.slice(0, 6);
+
+  useEffect(() => () => cancelAnimationFrame(animation.current), []);
+
+  function toggleProjects() {
+    if (animating.current) return;
+    const expanding = !showAll;
+    const element = grid.current;
+    const startHeight = element.getBoundingClientRect().height;
+    const startScroll = window.scrollY;
+    const buttonTop = toggle.current.getBoundingClientRect().top;
+    animating.current = true;
+
+    if (expanding) flushSync(() => setShowAll(true));
+    window.scrollTo({ top: startScroll, behavior: "instant" });
+    const bounds = element.getBoundingClientRect();
+    const layout = getComputedStyle(element);
+    const rows = layout.gridTemplateRows.split(" ").map(parseFloat);
+    const visibleRows = Math.ceil(6 / layout.gridTemplateColumns.split(" ").length);
+    const gap = parseFloat(layout.rowGap);
+    const collapsedHeight = rows.slice(0, visibleRows).reduce((sum, height) => sum + height, 0) + gap * (visibleRows - 1);
+    const endHeight = expanding
+      ? bounds.height
+      : collapsedHeight;
+    const headerHeight = document.querySelector(".site-header").getBoundingClientRect().height;
+    // Reveal the first extra card; on collapse keep the button in the same
+    // viewport position while the list and scroll position shrink together.
+    const targetScroll = expanding
+      ? bounds.top + collapsedHeight + gap + startScroll - headerHeight - 24
+      : startScroll + endHeight - startHeight;
+    const endScroll = Math.max(0, expanding
+      ? targetScroll
+      : targetScroll + Math.min(0, buttonTop - headerHeight - 24));
+    const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 480;
+    element.style.overflow = "clip";
+    // Fixed tracks prevent CSS Grid from squeezing cards during the reveal.
+    element.style.gridTemplateRows = layout.gridTemplateRows;
+    element.style.height = `${startHeight}px`;
+    const started = performance.now();
+
+    function frame(now) {
+      const progress = duration ? Math.min(1, (now - started) / duration) : 1;
+      const eased = 1 - Math.pow(1 - progress, 3);
+      element.style.height = `${startHeight + (endHeight - startHeight) * eased}px`;
+      window.scrollTo({ top: startScroll + (endScroll - startScroll) * eased, behavior: "instant" });
+      if (progress < 1) {
+        animation.current = requestAnimationFrame(frame);
+      } else {
+        if (!expanding) flushSync(() => setShowAll(false));
+        element.style.height = "";
+        element.style.overflow = "";
+        element.style.gridTemplateRows = "";
+        animating.current = false;
+      }
+    }
+    animation.current = requestAnimationFrame(frame);
+  }
   return (
     <section className="work-section container" id="MyPortfolio">
       <div className="section-title-row">
@@ -21,7 +82,7 @@ export default function MyPortfolio({ language }) {
           ? "Egna projekt. Läs om problemet, lösningen och min roll i varje bygge."
           : "Personal projects. Explore the problem, the solution, and my role in each build."}
       </p>
-      <div className="project-grid" id="portfolio-projects">
+      <div className="project-grid" id="portfolio-projects" ref={grid}>
         {visibleProjects.map((project) => (
           <article className="project-card" key={project.slug}>
             <Link
@@ -62,12 +123,13 @@ export default function MyPortfolio({ language }) {
             className="button button-secondary"
             aria-controls="portfolio-projects"
             aria-expanded={showAll}
-            onClick={() => setShowAll((value) => !value)}
+            ref={toggle}
+            onClick={toggleProjects}
           >
             {showAll
               ? sv ? "Visa färre projekt" : "Show fewer projects"
               : sv ? "Se fler projekt" : "Show more projects"}
-            <FiArrowRight aria-hidden="true" />
+            {showAll ? <FiChevronUp aria-hidden="true" /> : <FiChevronDown aria-hidden="true" />}
           </button>
         </div>
       )}

@@ -115,14 +115,42 @@ main:focus {
   gap: 40px;
 }
 .profile-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
   font-family: "Manrope", sans-serif;
   font-weight: 800;
   font-size: 23px;
   letter-spacing: -1px;
   white-space: nowrap;
 }
-.profile-brand > span {
-  color: #a34e18;
+.brand-monogram {
+  width: 44px;
+  height: 44px;
+  color: var(--accent);
+}
+.profile-brand .brand-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 1.05;
+  letter-spacing: -0.9px;
+  color: var(--ink);
+}
+.brand-period {
+  color: var(--accent);
+}
+@media (max-width: 380px) {
+  .profile-brand {
+    gap: 8px;
+  }
+  .brand-monogram {
+    width: 36px;
+    height: 36px;
+  }
+  .profile-brand .brand-name {
+    font-size: 17px;
+  }
 }
 .main-nav {
   display: flex;
@@ -1678,4 +1706,10 @@ main:focus {
   display: flex;
   justify-content: center;
   margin-top: 32px;
+}
+.work-section {
+  overflow-anchor: none;
+}
+.project-grid {
+  align-content: start;
 }

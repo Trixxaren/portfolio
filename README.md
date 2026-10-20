@@ -94,8 +94,9 @@ Agent 1–5 throughout the case. No Gmail attachment URLs are stored in the app.
 stays visible without animation support, and reduced-motion preferences disable
 these effects.
 
-The design is restored from `01ff875`. Four projects have been added using
-the existing card and detail templates: QuestForge, Salon, AI Product Studio,
-and ProjectFlow. The overview shows these first, with six cards initially;
-“Show more projects” reveals the remaining three. Sources and screenshot
-provenance are recorded in `docs/PROJECT-SOURCES.md`.
+The design is based on `01ff875`, with a personal RV/name wordmark.
+Sales-OS appears first, followed by QuestForge and AI Product Studio and the
+older projects. Salon and ProjectFlow have been removed at Robin's request.
+Six of seven projects appear initially. The show more/fewer control animates
+the list height and scroll position together, respecting reduced motion.
+Sources and screenshot provenance are recorded in `docs/PROJECT-SOURCES.md`.

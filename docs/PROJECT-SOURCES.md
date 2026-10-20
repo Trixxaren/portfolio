@@ -1,5 +1,9 @@
 # Project additions — 2026-10-20
 
+Update: Robin subsequently requested removal of Salon and ProjectFlow from
+the portfolio. Only QuestForge and AI Product Studio remain from this batch.
+The original source inventory below is retained for reference.
+
 The four projects were requested by Robin. Descriptions use their local
 README and package.json files, with existing demo screenshots inspected
 before copying. These repositories were read, not modified or executed.

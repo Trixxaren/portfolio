@@ -111,3 +111,13 @@ Ingen annan design-, text- eller teknikändring ingår.
 De nya projektens fakta och bildursprung dokumenteras i docs/PROJECT-SOURCES.md.
 Robin har godkänt push av det färdiga arbetet; korrigeringen görs som en ny
 commit utan att skriva om tidigare Git-historik.
+
+## Projekturval, scrollning och logotyp — 2026-10-20
+
+Robin vill ta bort Salon och ProjectFlow samt placera Sales-OS först.
+De sju återstående projekten använder fortsatt befintliga projektmallar.
+Sex visas initialt. Visa fler/färre ska kombinera mjuk höjdändring och
+scrollning, med stabil knapposition vid stängning och utan animation för
+besökare som föredrar reducerad rörelse.
+Namnlogotypen får ett RV-monogram och Robin Vikström som tydlig avsändare.
+Övrig layout och innehåll behålls.
