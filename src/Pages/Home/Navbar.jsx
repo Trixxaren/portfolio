@@ -21,7 +21,7 @@ export default function Navbar({ language, toggleLanguage }) {
             <rect x="1" y="1" width="42" height="42" rx="13" fill="currentColor" />
             <path d="M12 31V13H20C28 13 28 23 20 23H12M20 23L27 31L34 13" stroke="var(--surface)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span className="brand-name">robin<span>vikström<span className="brand-period">.</span></span></span>
+          <span className="brand-name">Robin<span>Vikström<span className="brand-period">.</span></span></span>
         </Link>
         <nav
           id="main-navigation"
