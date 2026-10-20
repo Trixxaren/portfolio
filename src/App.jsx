@@ -7,12 +7,12 @@ import {
   useLocation,
 } from "react-router-dom";
 import "./App.css";
-import Home from "./Pages/Home/Homescreen";
-import MotionEffects from "./Pages/Home/MotionEffects";
-import Navbar from "./Pages/Home/Navbar";
-import Footer from "./Pages/Home/Footer";
-import ThankYou from "./Pages/Home/ThankYou";
-import ProjectDetail from "./Pages/Home/ProjectDetail";
+import Home from "./components/Home";
+import MotionEffects from "./components/MotionEffects";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import MessagePage from "./components/MessagePage";
+import ProjectDetail from "./components/ProjectDetail";
 import { projects } from "./data/projects";
 
 function PageEffects({ language }) {
@@ -75,6 +75,10 @@ function PageEffects({ language }) {
 }
 
 export default function App() {
+  const [motionPaused, setMotionPaused] = useState(() => {
+    try { return localStorage.getItem("portfolio-motion") === "paused"; }
+    catch { return false; }
+  });
   const [language, setLanguage] = useState(() => {
     try {
       return localStorage.getItem("portfolio-language") === "en" ? "en" : "sv";
@@ -89,10 +93,15 @@ export default function App() {
       /* Storage is optional. */
     }
   }, [language]);
+  useEffect(() => {
+    document.documentElement.dataset.motion = motionPaused ? "paused" : "active";
+    try { localStorage.setItem("portfolio-motion", motionPaused ? "paused" : "active"); }
+    catch { /* Storage is optional. */ }
+  }, [motionPaused]);
   return (
     <BrowserRouter>
       <PageEffects language={language} />
-      <MotionEffects />
+      <MotionEffects paused={motionPaused} />
       <Navbar
         language={language}
         toggleLanguage={() =>
@@ -101,7 +110,7 @@ export default function App() {
       />
       <main id="main" tabIndex={-1}>
         <Routes>
-          <Route path="/" element={<Home language={language} />} />
+          <Route path="/" element={<Home language={language} motionPaused={motionPaused} toggleMotion={() => setMotionPaused(current => !current)} />} />
           <Route
             path="/projects/solvigo-sales-os"
             element={<Navigate to="/projects/sales-os" replace />}
@@ -110,8 +119,8 @@ export default function App() {
             path="/projects/:slug"
             element={<ProjectDetail language={language} />}
           />
-          <Route path="/thank-you" element={<ThankYou language={language} />} />
-          <Route path="*" element={<ThankYou language={language} notFound />} />
+          <Route path="/thank-you" element={<MessagePage language={language} />} />
+          <Route path="*" element={<MessagePage language={language} notFound />} />
         </Routes>
       </main>
       <Footer language={language} />

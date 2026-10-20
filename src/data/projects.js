@@ -1,5 +1,368 @@
 // Add projects here; keep unconfirmed details and links empty.
 export const projects = [
+{
+  "slug": "ai-product-studio-app",
+  "title": "AI Product Studio",
+  "status": "ongoing",
+  "kind": "project",
+  "cover": "product-studio",
+  "tags": {
+    "sv": [
+      "React",
+      "TypeScript",
+      "Produktdesign"
+    ],
+    "en": [
+      "React",
+      "TypeScript",
+      "Product design"
+    ]
+  },
+  "github": null,
+  "demo": null,
+  "screenshots": [
+    {
+      "src": "/screenshots/ai-product-studio/home.png",
+      "sv": "Produktstudions startsida och mallar · Syntetiska exempel",
+      "en": "Product studio home and templates · Synthetic examples"
+    }
+  ],
+  "sv": {
+    "summary": "Från en första idé till en strukturerad produktplan. En lokal studio för att utforska funktioner, design och teknikval.",
+    "problem": "En produktidé behöver bli konkret innan utvecklingen börjar: vad ska byggas, hur ska det fungera och vilka teknikval passar?",
+    "solution": "En fungerande frontend-MVP med sex steg, fem mallar och tre interaktiva designriktningar. Modulval, teknikförklaringar och JSON-export samlar besluten i en produktplan.",
+    "role": "Eget projekt inom produktutveckling, UX och teknisk planering.",
+    "technology": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "localStorage",
+      "JSON-export"
+    ],
+    "architecture": [
+      [
+        "Lokal klient",
+        "React visar arbetsflödet. TypeScript beskriver produktplanen, modulerna och designvalen."
+      ],
+      [
+        "Regler och lagring",
+        "Modulberoenden och stegkrav hanteras i domänlogiken. Utkast sparas i webbläsaren och kan exporteras som JSON."
+      ],
+      [
+        "Demonstrationsgräns",
+        "Idématchning använder nyckelord. Agentarbetsytan är en demonstration, utan aktiva AI-agenter eller kodgenerering."
+      ]
+    ],
+    "decisions": [
+      [
+        "Jämför innan du väljer",
+        "Tre interaktiva designriktningar gör det möjligt att prova olika gränssnitt innan ett uttryckligt designval sparas."
+      ]
+    ],
+    "learning": [],
+    "next": "Lokal MVP under utveckling. Backend, konton, synkronisering och en verklig utvecklingsmotor ingår inte i den nuvarande versionen."
+  },
+  "en": {
+    "summary": "From an initial idea to a structured product plan. A local studio for exploring features, design, and technology choices.",
+    "problem": "A product idea needs to become concrete before development starts: what to build, how it should work, and which technologies fit.",
+    "solution": "A working frontend MVP with six steps, five templates, and three interactive design directions. Module selection, technical explanations, and JSON export bring the decisions into one product plan.",
+    "role": "A personal project in product development, UX, and technical planning.",
+    "technology": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "localStorage",
+      "JSON export"
+    ],
+    "architecture": [
+      [
+        "Local client",
+        "React presents the workflow. TypeScript describes product plans, modules, and design choices."
+      ],
+      [
+        "Rules and storage",
+        "Domain logic handles module dependencies and step requirements. Drafts are stored in the browser and can be exported as JSON."
+      ],
+      [
+        "Demonstration boundary",
+        "Idea matching uses keywords. The agent workspace is a demonstration, with no active AI agents or code generation."
+      ]
+    ],
+    "decisions": [
+      [
+        "Compare before choosing",
+        "Three interactive design directions let users try different interfaces before explicitly saving a design choice."
+      ]
+    ],
+    "learning": [],
+    "next": "A local MVP in development. The current version does not include a backend, accounts, synchronisation, or an actual development engine."
+  }
+},
+{
+  "slug": "salon",
+  "title": "Salon",
+  "status": "ongoing",
+  "kind": "project",
+  "cover": "salon",
+  "tags": [
+    "Node.js",
+    "SQLite",
+    "Fullstack"
+  ],
+  "github": null,
+  "demo": null,
+  "screenshots": [
+    {
+      "src": "/screenshots/salon/booking.png",
+      "sv": "Salong Lugn: behandlingar och bokningsflöde · Lokal demo med fiktiva kundalias",
+      "en": "Salong Lugn: treatments and booking flow · Local demo with fictional customer aliases"
+    }
+  ],
+  "sv": {
+    "summary": "En lokal fullstack-app för salongsbokning, med SQLite, servervaliderade tider och en administrationsvy.",
+    "problem": "Ett bokningsflöde måste vara enkelt för kunden och samtidigt hindra att samma frisör blir dubbelbokad.",
+    "solution": "Salong Lugn är en MVP för en frisör och en stol. Kunden väljer behandling, ledig tid och ett fiktivt alias. Adminvyn hanterar bokningar, avbokningar, behandlingar och arbetstider.",
+    "role": "Eget projekt inom produktutveckling, bokningsflöden och fullstack.",
+    "technology": [
+      "Node.js",
+      "SQLite",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "HTTP API"
+    ],
+    "architecture": [
+      [
+        "Gränssnitt och API",
+        "Webbläsaren hämtar behandlingar och lediga tider från Node-servern. Servern validerar bokningen igen innan den sparas."
+      ],
+      [
+        "Databas",
+        "SQLite lagrar bokningar och inställningar. Transaktioner och överlappstriggers skyddar hela behandlingsintervallet."
+      ],
+      [
+        "Bokningshistorik",
+        "Namn, pris och längd sparas med bokningen, så att senare ändringar av en behandling inte skriver om historiken."
+      ]
+    ],
+    "decisions": [
+      [
+        "Avgränsad MVP",
+        "En frisör, en stol och lokal drift håller bokningsreglerna överblickbara. Betalning, SMS och e-post ingår inte."
+      ]
+    ],
+    "learning": [],
+    "next": "Fungerande lokal MVP under utveckling. Adminvyn är en demo utan inloggning; autentisering och säker drift behöver tillkomma före verklig användning."
+  },
+  "en": {
+    "summary": "A local fullstack salon booking app with SQLite, server-validated time slots, and an administration view.",
+    "problem": "Booking needs to be simple for the customer while preventing double bookings for the same hairdresser.",
+    "solution": "Salong Lugn is an MVP for one hairdresser and one chair. Customers choose a treatment, an available time, and a fictional alias. The admin view manages bookings, cancellations, treatments, and working hours.",
+    "role": "A personal project in product development, booking workflows, and fullstack development.",
+    "technology": [
+      "Node.js",
+      "SQLite",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "HTTP API"
+    ],
+    "architecture": [
+      [
+        "Interface and API",
+        "The browser fetches treatments and available times from the Node server. The server validates each booking again before saving it."
+      ],
+      [
+        "Database",
+        "SQLite stores bookings and settings. Transactions and overlap triggers protect the full treatment interval."
+      ],
+      [
+        "Booking history",
+        "Treatment name, price, and duration are saved with each booking so later treatment changes do not rewrite its history."
+      ]
+    ],
+    "decisions": [
+      [
+        "A focused MVP",
+        "One hairdresser, one chair, and local operation keep the booking rules manageable. Payments, SMS, and email are not included."
+      ]
+    ],
+    "learning": [],
+    "next": "A working local MVP in development. The admin view is a demo without authentication; authentication and secure hosting are needed before real use."
+  }
+},
+{
+  "slug": "projectflow",
+  "title": "ProjectFlow",
+  "status": "ongoing",
+  "kind": "project",
+  "cover": "projectflow",
+  "tags": [
+    "React",
+    "Vite",
+    "UX / UI"
+  ],
+  "github": null,
+  "demo": null,
+  "screenshots": [
+    {
+      "src": "/screenshots/projectflow/still.png",
+      "sv": "Still: en av tre interaktiva designriktningar · Fiktiva exempeldata",
+      "en": "Still: one of three interactive design directions · Fictional sample data"
+    }
+  ],
+  "sv": {
+    "summary": "Tre sätt att organisera projekt och uppgifter. En interaktiv designstudie med dashboard, listor och Kanban.",
+    "problem": "Samma projektinformation kan kännas lugn, tät eller lekfull beroende på hur gränssnittet utformas. Det behöver gå att prova innan riktningen väljs.",
+    "solution": "Tre frontendprototyper — Still, Signal och Bloom — med samma exempeldata. Det går att öppna projekt, flytta uppgifter, växla mellan lista och Kanban och skriva anteckningar.",
+    "role": "Eget projekt med fokus på produktförståelse, UX och jämförelse av interaktiva designriktningar.",
+    "technology": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "CSS"
+    ],
+    "architecture": [
+      [
+        "Gemensamt underlag",
+        "Alla tre riktningar använder samma syntetiska projektdata och lokalt tillstånd."
+      ],
+      [
+        "Navigation",
+        "Lätt hashbaserad navigation kopplar samman dashboard och projektvyer. Ingen backend, databas eller autentisering ingår."
+      ]
+    ],
+    "decisions": [
+      [
+        "Prova arbetsflödet",
+        "Designalternativen är interaktiva för att jämförelsen även ska omfatta navigation, uppgifter och återkoppling."
+      ]
+    ],
+    "learning": [],
+    "next": "Interaktiva prototyper under utveckling. Slutligt designval återstår. Uppgiftsändringar återställs vid omladdning och anteckningar när projektdialogen stängs."
+  },
+  "en": {
+    "summary": "Three ways to organise projects and tasks. An interactive design study with dashboards, lists, and Kanban.",
+    "problem": "The same project information can feel calm, dense, or playful depending on the interface. Those differences need to be tried before choosing a direction.",
+    "solution": "Three frontend prototypes — Still, Signal, and Bloom — using the same sample data. Users can open projects, move tasks, switch between list and Kanban views, and write notes.",
+    "role": "A personal project focused on product understanding, UX, and comparing interactive design directions.",
+    "technology": [
+      "React",
+      "Vite",
+      "JavaScript",
+      "CSS"
+    ],
+    "architecture": [
+      [
+        "Shared foundation",
+        "All three directions use the same synthetic project data and local state."
+      ],
+      [
+        "Navigation",
+        "Lightweight hash-based navigation connects dashboards and project views. There is no backend, database, or authentication."
+      ]
+    ],
+    "decisions": [
+      [
+        "Try the workflow",
+        "The design alternatives are interactive so comparisons also cover navigation, tasks, and feedback."
+      ]
+    ],
+    "learning": [],
+    "next": "Interactive prototypes in development. A final design direction has not been chosen. Task changes reset on reload and notes reset when the project dialog closes."
+  }
+},
+{
+  "slug": "questforge",
+  "title": "QuestForge",
+  "status": "ongoing",
+  "kind": "project",
+  "cover": "questforge",
+  "tags": [
+    "Phaser",
+    "Next.js",
+    "TypeScript"
+  ],
+  "github": null,
+  "demo": null,
+  "screenshots": [
+    {
+      "src": "/screenshots/questforge/workshop.jpg",
+      "sv": "Roboten som glömde: minnesverkstaden i den första spelprototypen (v0.1)",
+      "en": "The robot that forgot: the memory workshop in the first game prototype (v0.1)"
+    }
+  ],
+  "sv": {
+    "summary": "Ett kunskapsäventyr där spelaren undersöker skillnaden mellan tillfälligt minne och sparad information.",
+    "problem": "Tekniska begrepp som minne och lagring kan vara abstrakta. Här blir de något spelaren kan undersöka och experimentera med.",
+    "solution": "I Roboten som glömde hjälper spelaren en robot genom att förutsäga, prova och jämföra vad som händer vid ett strömavbrott. Version 0.2 lägger till fri rörelse, kollisioner och en slututmaning med en signal-fyr.",
+    "role": "Eget projekt inom spelbaserat lärande, interaktionsdesign och teknisk utveckling.",
+    "technology": [
+      "Phaser 3",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "localStorage"
+    ],
+    "architecture": [
+      [
+        "Spelvärld",
+        "Phaser hanterar rörelse, kollisioner, närhetskontroll och visuella effekter."
+      ],
+      [
+        "Gemensamt tillstånd",
+        "GameStore äger simuleringen. React visar samma tillstånd och hanterar dialogerna."
+      ],
+      [
+        "Sparade framsteg",
+        "Versionerade sparfiler lagras lokalt i webbläsaren. En separat testomgång skyddar spelarens ordinarie framsteg."
+      ]
+    ],
+    "decisions": [
+      [
+        "Lär genom att prova",
+        "Spelaren förutsäger ett resultat och ser konkret återkoppling. Ledtrådar kan användas utan poängavdrag."
+      ]
+    ],
+    "learning": [],
+    "next": "Spelbar lokal prototyp under utveckling. Nästa kapitel är inte byggt. Begriplighet, pedagogisk effekt och fysisk mobilanvändning behöver fortsatta tester."
+  },
+  "en": {
+    "summary": "A learning adventure where players explore the difference between temporary memory and saved information.",
+    "problem": "Technical concepts such as memory and storage can feel abstract. This project makes them something players can investigate and experiment with.",
+    "solution": "In The Robot That Forgot, players help a robot by predicting, trying, and comparing what happens during a power outage. Version 0.2 adds free movement, collisions, and a final signal-beacon challenge.",
+    "role": "A personal project in game-based learning, interaction design, and technical development.",
+    "technology": [
+      "Phaser 3",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "localStorage"
+    ],
+    "architecture": [
+      [
+        "Game world",
+        "Phaser handles movement, collisions, proximity checks, and visual effects."
+      ],
+      [
+        "Shared state",
+        "GameStore owns the simulation. React displays the same state and manages dialogs."
+      ],
+      [
+        "Saved progress",
+        "Versioned saves are stored locally in the browser. A separate playtest session protects the player's main progress."
+      ]
+    ],
+    "decisions": [
+      [
+        "Learn by experimenting",
+        "Players predict an outcome and receive concrete feedback. Hints are available without a points penalty."
+      ]
+    ],
+    "learning": [],
+    "next": "A playable local prototype in development. The next chapter is not built. Clarity, learning outcomes, and physical mobile use need further testing."
+  }
+},
   {
     slug: "quizmaster",
     title: "Quizmaster",

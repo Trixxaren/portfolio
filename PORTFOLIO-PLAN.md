@@ -95,3 +95,93 @@ språken markerar demodata. Originalen ska inte finnas i public eller dist.
 Originalfilerna i Downloads ändras inte.
 
 Behåll designen från 6b11802. Ingen push eller deploy utan Robins godkännande.
+
+## Ny ombyggnad från grunden — 2026-10-06
+
+Robin har nu bett om en helt ny portfolio med samma projekt och information
+som i det befintliga repot, en ny visuell identitet och mycket animation.
+Den här riktningen ersätter tidigare krav på att behålla den gamla designen.
+Innehållet och dess sakliga begränsningar gäller fortfarande.
+
+- GitHub-repot har hämtats. Lokal HEAD och `origin/main` var identiska på
+  `01ff875008d74e90784bd386b93765c85722dd7b` före ombyggnaden.
+- Projekt, personliga texter, kontaktinställningar, länkar och bildreferenser
+  är bevarade i `docs/content-snapshot-2026-10-06.json`.
+  `docs/CONTENT-ARCHIVE.md` beskriver innehållet och det fullständiga lokala
+  originalarkivet `.qa.local/portfolio-before-rebuild-2026-10-06.zip`.
+- Behåll de fem projekten, korrekta statusar och all projektinformation.
+  Sales-OS är Robins eget pågående bygge. De andra fyra är färdiga projekt.
+- Behåll svenska och engelska, sparat språkval, CV-länkar, kontaktvägar
+  och alla sex Sales-OS-bilder med tydligt markerad fiktiv demodata.
+- Föreslagen visuell riktning: varmvit, svart och orange, stor typografi,
+  en personlig redaktionell layout och uttrycksfull rörelse. Det är ett
+  förslag att granska i den lokala implementationen, inte ett tidigare
+  godkänt färgbeslut.
+- Den tekniska inriktningen är fortsatt React/Vite. Innehållet och
+  kontaktformuläret behöver ingen egen server i nuläget; Next.js är en
+  möjlighet Robin nämnt, inte ett krav. Formspree kan behållas.
+- Animationer ska fungera på mobil och respektera reducerad rörelse.
+  Projekten och deras innehåll ska förbli enkla att läsa och använda.
+- Lokala ändringar, verifiering och commits är tillåtna. Ingen push eller
+  deploy utan Robins uttryckliga godkännande.
+
+### Genomfört och verifierat — 2026-10-06
+
+- Helt ny startsida, navigation, projektöversikt, om mig, kontakt, sidfot
+  och projektdetaljer. Den gamla komponentkatalogen och oanvända publika
+  bilder har tagits bort efter arkivering.
+- Orange, ribbad WebGL-skulptur med pekarrespons, långsam rörelse, statisk
+  fallback och sparad pausinställning. Rörelse stannar även utanför bild,
+  i bakgrundsflikar och vid systemets inställning för reducerad rörelse.
+- Sales-OS först i projektordningen; originaldata och befintliga länkar
+  har kontrollerats mot det exakta innehållsarkivet.
+- Lokalt levererade typsnitt, responsiva skärmbilder, nya bildgallerier
+  och projektsidor med läsindex på större skärmar.
+- `npm run lint` och `npm run build` passerar. Vite använder native
+  configLoader för att undvika Windows-sandboxens katalogbegränsning.
+- 24 Playwright-tester passerar i lokal Chrome. De täcker projekt på båda
+  språken, språkets beständighet, mobilmeny, tangentbord, gallerier,
+  omdirigering, 404, fem bredder (320–1440 px) och rörelseinställningar.
+- Kontaktformulärets obligatoriska fält, serverfel, fältspecifika fel
+  och lyckade svar är testade med fångade anrop. Inga mejl har skickats.
+- Desktop- och mobilvyer har granskats med lokala skärmbilder i `.qa.local`.
+
+Robin har bett att en localhost-server ska startas och sidan öppnas när
+arbetet är färdigt. Nästa steg är visuell återkoppling på den lokala versionen.
+Ingen push eller deploy har gjorts.
+
+Den färdigbyggda versionen serveras med Vite preview på
+`http://127.0.0.1:5173/`. Preview körs som en dold lokal process; PID sparas i
+`.qa.local/preview.pid`. Den vägen undviker esbuilds katalogåtkomst vid
+utvecklingsserverns beroendeoptimering i den begränsade Windows-miljön.
+Startsidan har dessutom kontrollerats på båda språken i alla fem bredder,
+och skulpturens fallback är verifierad utan WebGL.
+
+Separat kvarstående punkt: audit rapporterade 18 brister i repots befintliga
+beroenden. Kompatibla uppdateringar finns, men installationen stoppades av
+automatisk godkännandekontroll (användningsgräns och timeout). Ingen sådan
+uppdatering har genomförts. Fråga om fortsatt uppdatering är ställd till Robin.
+
+## Fyra nya projekt — 2026-10-20
+
+Robin vill lägga till AI Product Studio, Salon, ProjectFlow och QuestForge.
+De läggs till i befintlig lokal design, efter det utvalda Sales-OS-caset
+och före de äldre projekten. Totalt finns nio projekt.
+
+Beskrivningar på svenska och engelska utgår från respektive lokalt repos
+README och package.json. De nya projekten visas som pågående med konkreta
+MVP-/prototypbegränsningar. Inga effektmått eller personliga lärdomar hittas på.
+Skärmbilder återanvänds från projektens lokala exempel/demo-material;
+QuestForges desktopbild är uttryckligen märkt som den första prototypen.
+
+GitHub-remotes är identifierade, men reporna finns inte i kontots publika
+GitHub-lista vid kontroll. GitHub- och demo-knappar lämnas därför dolda.
+Källor och bildursprung finns i docs/PROJECT-SOURCES.md.
+Robin har därefter uttryckligen godkänt att den färdiga versionen pushas
+till GitHub. Det omfattar den aktuella lokala portfolion med de fyra nya
+projekten. Ingen separat manuell deploy är beställd.
+
+Build och lint passerar. 25 webbläsartester för projektsidor på båda språken,
+projektkort, 404 och responsivitet passerar. De fyra nya detaljsidorna är
+dessutom kontrollerade vid 320, 390 och 768 px, inklusive bildvisare och Escape.
+Projektkorten på desktop och en ny projektsida på mobil är visuellt granskade.
