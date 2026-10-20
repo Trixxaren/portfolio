@@ -1,8 +1,9 @@
 ﻿import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
 import { copy } from "../../data/copy";
 export default function Navbar({ language, toggleLanguage }) {
+  const { pathname } = useLocation();
   const t = copy[language],
     [open, setOpen] = useState(false),
     menu = useRef(null),
@@ -10,13 +11,25 @@ export default function Navbar({ language, toggleLanguage }) {
   useEffect(() => {
     if (open) menu.current?.querySelector("a")?.focus();
   }, [open]);
+
+  function goToTop(event) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    setOpen(false);
+    if (pathname !== "/") return;
+    event.preventDefault();
+    document.getElementById("main")?.focus({ preventScroll: true });
+    window.scrollTo({
+      top: 0,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+    });
+  }
   return (
     <header className="site-header" id="top">
       <a className="skip-link" href="#main">
         {t.skip}
       </a>
       <div className="container header-inner">
-        <Link to="/" className="profile-brand" aria-label={language === "sv" ? "Robin Vikström — startsida" : "Robin Vikström — home"} onClick={() => setOpen(false)}>
+        <Link to="/" className="profile-brand" aria-label={language === "sv" ? "Robin Vikström — startsida" : "Robin Vikström — home"} onClick={goToTop}>
           <svg className="brand-monogram" viewBox="0 0 44 44" fill="none" aria-hidden="true">
             <rect x="1" y="1" width="42" height="42" rx="13" fill="currentColor" />
             <path d="M12 31V13H20C28 13 28 23 20 23H12M20 23L27 31L34 13" stroke="var(--surface)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
