@@ -30,16 +30,11 @@ export default function AboutMe({ language }) {
             <span>{t.learningNow}</span>
           </div>
           <ul>
-            {t.learningAreas.map((item, i) => (
-              <li key={item}>
-                <span>0{i + 1}</span>
-                {item}
-              </li>
-            ))}
+            {t.learningAreas.map((item) => <li key={item}>{item}</li>)}
           </ul>
           <div className="note-foot">
             <span className="live-dot" />
-            {sv ? "Lär genom att bygga" : "Learning by building"}
+            {t.learningNote}
           </div>
         </aside>
       </div>

@@ -21,10 +21,11 @@ export const copy = {
     learningNow: "Det jag fördjupar mig i",
     learningAreas: [
       "Fullstackutveckling",
-      "API:er & datamodellering",
+      "Affärsutveckling",
       "AI-workflows & automation",
       "Teknisk projektledning",
     ],
+    learningNote: "Lär genom att bygga och arbeta med i vardagen",
     approach: [
       [
         "Förstå problemet",
@@ -86,10 +87,11 @@ export const copy = {
     learningNow: "What I’m learning",
     learningAreas: [
       "Fullstack development",
-      "APIs & data modelling",
+      "Business development",
       "AI workflows & automation",
       "Technical project management",
     ],
+    learningNote: "Learning by building and applying it in everyday work",
     approach: [
       [
         "Understand the problem",

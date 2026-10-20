@@ -700,19 +700,16 @@ main:focus {
   margin-bottom: 22px;
 }
 .learning-note ul {
-  list-style: none;
+  list-style: disc;
+  padding-left: 18px;
 }
 .learning-note li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 0;
+  padding: 14px 0 14px 4px;
   border-top: 1px solid #dfcbb9;
   font-size: 13px;
 }
-.learning-note li > span {
-  font-size: 10px;
-  color: #785f48;
+.learning-note li::marker {
+  color: var(--accent);
 }
 .note-foot {
   display: flex;

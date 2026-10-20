@@ -121,3 +121,11 @@ scrollning, med stabil knapposition vid stängning och utan animation för
 besökare som föredrar reducerad rörelse.
 Namnlogotypen får ett RV-monogram och Robin Vikström som tydlig avsändare.
 Övrig layout och innehåll behålls.
+
+## Fördjupningsområden — 2026-10-20
+
+Byt det andra området till Affärsutveckling / Business development.
+Behåll de övriga tre områdena och visa alla som en vanlig punktlista
+utan numrering eller inbördes prioritering.
+Avsluta med ”Lär genom att bygga och arbeta med i vardagen” samt
+motsvarande engelska text.
