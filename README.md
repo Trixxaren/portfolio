@@ -1,93 +1,101 @@
-# Robin Vikström — portfolio
+﻿# Robin Vikström — personal portfolio
 
-En personlig portfolio med React, Vite och CSS. Ljus och avskalad med en
-scrollstyrd projektsekvens, läsbar text och en enhetlig projektöversikt.
-De fem ursprungliga projekten och deras sakuppgifter är bevarade. AI Product
-Studio, Salon, ProjectFlow och QuestForge är tillagda: totalt nio projekt.
+A project-based portfolio about business, product, AI and technical learning.
+Built with React, Vite, React Router and CSS.
 
-## Kör lokalt
+## Local development
 
 ```sh
 npm install
 npm run dev -- --host 127.0.0.1
 ```
 
-Öppna http://127.0.0.1:5173/. Använd `npm.cmd` i PowerShell om `npm` blockeras
-av datorns skriptpolicy. Produktion byggs till `dist` med `npm run build`.
+Use `npm.cmd` in PowerShell if the script execution policy blocks `npm`.
+The preview normally runs at http://127.0.0.1:5173/.
 
-## Kontroller
+## Checks
 
 ```sh
 npm run lint
 npm run build
-npm run test:e2e
 ```
 
-Webbläsartesterna använder installerad Google Chrome. Playwright startar
-utvecklingsservern om den inte redan körs. Testerna blockerar extern trafik
-och simulerar kontaktformulärets svar; inga meddelanden skickas.
+## Add or edit a project
 
-Testerna täcker de nio projekten på svenska och engelska, sparat språkval,
-mobilnavigation, bildvisare och tangentbord, gamla projektlänkar, 404,
-kontaktformulär, fem skärmbredder, reducerad/pausad rörelse och projektfilmens
-scrollförlopp, direktval och mobilversion.
+Edit `src/data/projects.js`. Each record has:
 
-## Innehåll och struktur
+- `slug`, `title`, `status`, `kind`, `cover`, `tags`
+- `github` and `demo`: URL or null
+- `screenshots`: objects with `src`, `sv` and `en` captions
+- `sv` and `en` content with `summary`, `problem`, `solution`, `role`,
+  `technology`, `architecture`, `decisions`, `learning`, optional `analytics` and `next`
 
-- `src/data/projects.js`: projekt, status, fakta, teknik, länkar och bildtexter.
-- `src/data/copy.js`: personlig text och gränssnitt på båda språken.
-- `src/components/Home.jsx`: presentation, projektöversikt och om mig.
-- `src/components/ProjectDetail.jsx`: gemensam detaljvy för projekt.
-- `src/components/ScreenshotGallery.jsx`: bildvisare med native dialog.
-- `src/components/ProjectFilm.jsx`: scrollstyrd sekvens med faktiska projektbilder.
-- `src/components/Contact.jsx`: det befintliga Formspree-formuläret.
-- `src/App.css` och `src/styles/`: responsiv design och animationer.
+Statuses: `completed`, `ongoing`, `concept`.
+Tags can be a shared array or an object with separate `sv` and `en` arrays.
+Architecture and decisions are arrays of `[title, description]` pairs.
+Use empty arrays or strings when information is unavailable. Optional empty
+sections and missing links are hidden automatically.
 
-Sales-OS visas först som **pågående eget bygge**. Quizmaster, Hittarecept,
-Konnect ChatApp och Namngivelse inbjudan visas som färdiga projekt. Inga
-effektmått, länkar eller meriter har lagts till utan underlag. Projektsidorna
-har även stöd för tydligt märkta koncept och döljer tomma valfria fält.
+Adding a record creates its card and `/projects/<slug>` detail page.
+For a screenshot cover, set `cover: "screenshot"` and provide a screenshot.
+Without screenshots, the cover displays the project title. Custom cover
+illustrations live in `ProjectCover.jsx`.
 
-AI Product Studio, Salon, ProjectFlow och QuestForge visas som pågående
-MVP:er/prototyper med skärmbilder och förklarade begränsningar på båda språken.
-Källor, bildursprung och länkkontroll finns i [projektunderlaget](docs/PROJECT-SOURCES.md).
-GitHub-knappar visas först när projektens publika länkar kan verifieras.
+UI and personal copy: `src/data/copy.js`.
+Styles: `src/App.css`.
+Current scope and release checklist: `PORTFOLIO-PLAN.md`.
 
-Sales-OS-bildernas företags- och personuppgifter är fiktiv demodata.
-De sex godkända `public/screenshots/sales-os/demo-*.png` används. Originalbilder
-med verkliga uppgifter och den gamla inloggningsbilden ska inte publiceras.
+## Content accuracy
 
-## Rörelse och tillgänglighet
+Sales-OS is Robin’s own build, per his latest clarification. It is shown as an
+ongoing case, alongside other projects. Concepts are explicitly labelled.
+Illustrations use sample data, not internal customer information.
 
-Hero-sekvensen visar Sales-OS, Hittarecept och Quizmaster. Vanlig scroll styr
-bildövergångar och en försiktig kameraeffekt på större skärmar. Sekvensen är
-byggd med HTML/CSS och riktiga projektbilder; den är inte en inspelad video.
-Scrollen kapas inte och knappen ”Se mina projekt” går direkt till projektlistan.
+Sales-OS is an ongoing CRM + Business OS. The stack, agent roles and rule-based
+controls come from Robin’s updated project description. Analytics is part of the
+same system; effectiveness claims and code/test counts are not presented as
+independently verified results. The original four projects remain.
+Do not infer completed features, architecture decisions or measurable outcomes.
 
-På mobil, i korta fönster och vid reducerad rörelse är projektvisningen statisk,
-med knappar för att välja projekt. ”Minska rörelse” finns före sekvensen och
-sparar valet. Systemets `prefers-reduced-motion` respekteras även när det ändras.
+## Contact and deployment
 
-Sektioner tonas in vid scroll. Innehållet är synligt även utan animationsstöd.
-Navigering, formulär, språkväxling och bildvisare går att använda med tangentbord.
-Typsnittet Manrope levereras lokalt i bygget. Huvudtext är minst 16 px och
-bildtexter minst 14 px. Formulärfält och kontroller har synliga fokusmarkeringar.
+Contact uses the existing Formspree form. Local checks mock API responses and
+do not send external messages. Actual delivery needs a separate check.
 
-## Kontakt och publicering
+Build: `npm run build`. Netlify publish directory: `dist`.
+`public/_redirects` supports direct SPA route loading.
+The old `/projects/solvigo-sales-os` path redirects to `/projects/sales-os`.
 
-Formspree-formuläret `xqapopdp` och befintlig mejladress används fortsatt.
-Lyckade svar leder till `/thank-you`. Verklig leverans har inte testats;
-testerna använder simulerade svar. Någon Next.js-server behövs inte för
-portfolions nuvarande funktioner.
+Local commits are allowed. **Do not push or deploy without Robin’s explicit
+approval.** The existing live address is https://robinvikstrom.netlify.app/.
 
-`public/_redirects` stöder direkta SPA-länkar på Netlify. Den gamla adressen
-`/projects/solvigo-sales-os` omdirigeras till `/projects/sales-os`.
+## Screenshot galleries
 
-**Ingen push eller publicering utan Robins uttryckliga godkännande.**
+`ScreenshotGallery.jsx` renders the `screenshots` array with thumbnails and a
+keyboard-accessible full-size dialog. Add local image paths and both captions
+to the project record; the first image is also used on the project card.
 
-## Bevarat original
+Captured from the public demos on 2026-10-02:
+- Quizmaster: https://quizmastertrixx.netlify.app/ (categories and question)
+- Hittarecept: https://hittarecept.netlify.app/ (discovery and recipe details)
+- Konnect: https://konnectchat.netlify.app/login (login and registration)
 
-Se [innehållsarkivet](docs/CONTENT-ARCHIVE.md). Den exakta informationen före
-ombygget finns i `docs/content-snapshot-2026-10-06.json`. En fullständig lokal
-arkivkopia finns i `.qa.local/portfolio-before-rebuild-2026-10-06.zip`.
-Originalets Git-revision är `01ff875`. Arbetsriktning finns i `PORTFOLIO-PLAN.md`.
+PNG captures are in `public/screenshots/`. No authentication or submissions
+were performed. Six Sales-OS demo images are in
+`public/screenshots/sales-os/`, with the dashboard first as the project cover.
+All business and personal data in these images is fictional. They were edited
+with the built-in image tool; layouts and typography may differ slightly from
+the source screenshots. Captions in both languages label them as demo data.
+The seventh gallery image (development sign-in) and the original screenshots
+are excluded from public assets and the production build. Agent names use
+Agent 1–5 throughout the case. No Gmail attachment URLs are stored in the app.
+
+`MotionEffects.jsx` animates sections once when entering the viewport. Content
+stays visible without animation support, and reduced-motion preferences disable
+these effects.
+
+The design is restored from `01ff875`. Four projects have been added using
+the existing card and detail templates: QuestForge, Salon, AI Product Studio,
+and ProjectFlow. The overview shows these first, with six cards initially;
+“Show more projects” reveals the remaining three. Sources and screenshot
+provenance are recorded in `docs/PROJECT-SOURCES.md`.
