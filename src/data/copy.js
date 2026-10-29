@@ -51,8 +51,7 @@ export const copy = {
       ],
     ],
     cv: "Mitt CV",
-    cvLink:
-      "https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link",
+    cvLink: "/cv/Robin-Vikstrom-CV-SV.pdf",
     contactEyebrow: "KONTAKT",
     contactTitle: "Ska vi prata",
     contactItalic: "om en idé?",
@@ -127,8 +126,7 @@ export const copy = {
       ],
     ],
     cv: "My CV",
-    cvLink:
-      "https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link",
+    cvLink: "/cv/Robin-Vikstrom-CV-EN.pdf",
     contactEyebrow: "CONTACT",
     contactTitle: "Have an idea",
     contactItalic: "in mind?",

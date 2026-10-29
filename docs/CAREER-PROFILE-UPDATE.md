@@ -19,22 +19,26 @@ separates the two new introductory paragraphs by 16px.
 - The other six project records are unchanged.
 - Page metadata follows the new profile in both languages.
 
-## CV links: action still needed
+## CV links: resolved
 
-No CV file was found in the repository. The existing links remain:
+Robin supplied the current Swedish and English PDF files from his
+`OneDrive/Skrivbord/Jobbrelaterat` folder. They are copied without modification
+and served directly by the portfolio:
 
-- Swedish: https://drive.google.com/file/d/1nwi5-Tz-900ZCL7Hv_FxP7rFAArTD49x/view?usp=drive_link
-- English: https://drive.google.com/file/d/1f67O4kb25M93ZSiFmxbhCaltZu0vHZrV/view?usp=drive_link
+- Swedish: `/cv/Robin-Vikstrom-CV-SV.pdf`
+- English: `/cv/Robin-Vikstrom-CV-EN.pdf`
 
-Both returned HTTP 200 and displayed the CV document in separate signed-out
-browser contexts on 2026-10-29. Their file titles were “Robin Vikström CV.pdf”
-and “Robin Vikström CV resume.pdf”. Public access does not establish that
-these are the latest versions. Robin needs to confirm them or provide the
-latest URLs. No replacement CV was created, and no LinkedIn profile was edited.
+The old Google Drive links have been replaced. Both PDFs have three pages
+and no encryption. Source and public-file SHA-256 hashes match, and production
+copies are byte-identical. Browser checks confirm that each language opens
+its corresponding PDF in a new tab; both routes return HTTP 200 and
+`application/pdf` without authentication. No CV content was edited.
 
 ## Files
 
 - `src/data/copy.js`: bilingual personal and UI copy, metadata strings.
+- `public/cv/Robin-Vikstrom-CV-SV.pdf` and `public/cv/Robin-Vikstrom-CV-EN.pdf`:
+  user-supplied current CVs.
 - `src/data/projects.js`: Sales-OS summary, solution and role only.
 - `src/Pages/Home/HeroSection.jsx`: render updated bilingual hero/caption.
 - `src/Pages/Home/AboutMe.jsx`: render the four supplied paragraphs.

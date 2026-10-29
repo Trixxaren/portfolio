@@ -14,10 +14,10 @@ beskrivs som behovsanalys, funktionsdefinition och styrning av utvecklingen;
 AI-kodverktyg har genererat stora delar av koden. Övriga projektdata bevaras.
 
 Uppdatera hero, porträttets yrkesrad, Om mig, kompetensområden, kontakttext,
-sidfot och metadata enligt den bifogade karriärprofilen. CV-länkarna får inte
-ersättas med gissade nya versioner. Befintliga länkar är publikt åtkomliga,
-men aktuell versionsstatus behöver bekräftas av Robin. Se
-docs/CAREER-PROFILE-UPDATE.md för kontrollresultat och exakta länkar.
+sidfot och metadata enligt den bifogade karriärprofilen. Robin har bekräftat
+de aktuella CV-filerna Robin-Vikstrom-CV-SV.pdf och Robin-Vikstrom-CV-EN.pdf.
+De finns oförändrade i public/cv och länkas från respektive språkversion.
+Google Drive-länkarna är ersatta. Se docs/CAREER-PROFILE-UPDATE.md för kontroller.
 
 Localhost för denna granskning: http://localhost:5174 (5173 är upptagen).
 Ingen separat driftsättning görs; tidigare godkännande för GitHub-push gäller.
