@@ -1,6 +1,28 @@
 ﻿# Portfolio — arbetsplan
 
-## Senaste riktningen (2026-10-01)
+## Gällande riktning — 2026-10-29
+
+Den nya karriärprofilen ersätter tidigare personliga presentationer nedan.
+Robin är en affärsperson med teknisk förståelse: försäljning,
+affärsutveckling, kundrelationer, Key Account Management samt projekt- och
+verksamhetsutveckling. Frontendutbildningen är avslutad. Teknikintresset
+och egna projekt finns kvar, utan att profilen främst riktas mot utvecklarjobb.
+
+Enbart innehåll uppdateras på svenska och engelska. Behåll design, struktur,
+funktioner, bilder, projekt och ordning. Sales-OS ligger först. Robins roll
+beskrivs som behovsanalys, funktionsdefinition och styrning av utvecklingen;
+AI-kodverktyg har genererat stora delar av koden. Övriga projektdata bevaras.
+
+Uppdatera hero, porträttets yrkesrad, Om mig, kompetensområden, kontakttext,
+sidfot och metadata enligt den bifogade karriärprofilen. CV-länkarna får inte
+ersättas med gissade nya versioner. Befintliga länkar är publikt åtkomliga,
+men aktuell versionsstatus behöver bekräftas av Robin. Se
+docs/CAREER-PROFILE-UPDATE.md för kontrollresultat och exakta länkar.
+
+Localhost för denna granskning: http://localhost:5174 (5173 är upptagen).
+Ingen separat driftsättning görs; tidigare godkännande för GitHub-push gäller.
+
+## Tidigare riktning (2026-10-01)
 
 - Ljus, modern hemsideslayout med personlig presentation och toppnavigation.
 - Varmvit bas, mjuka gröna toner, raka projektbilder och diskreta animationer.

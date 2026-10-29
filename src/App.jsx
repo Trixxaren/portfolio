@@ -14,6 +14,7 @@ import Footer from "./Pages/Home/Footer";
 import ThankYou from "./Pages/Home/ThankYou";
 import ProjectDetail from "./Pages/Home/ProjectDetail";
 import { projects } from "./data/projects";
+import { copy } from "./data/copy";
 
 function PageEffects({ language }) {
   const { pathname, hash } = useLocation();
@@ -27,9 +28,7 @@ function PageEffects({ language }) {
     const title = project
       ? project.title + " — Robin Vikström"
       : isHome
-        ? language === "sv"
-          ? "Robin Vikström — Affär, produkt & AI"
-          : "Robin Vikström — Business, product & AI"
+        ? copy[language].pageTitle
         : pathname === "/thank-you"
           ? language === "sv"
             ? "Tack — Robin Vikström"
@@ -37,9 +36,7 @@ function PageEffects({ language }) {
           : "404 — Robin Vikström";
     const description = project
       ? project[language].summary
-      : language === "sv"
-        ? "Personlig portfolio av Robin Vikström. Sales Manager som utforskar affär, produkt, AI och teknik genom egna projekt."
-        : "Robin Vikström’s personal portfolio. A Sales Manager exploring business, product, AI, and technology through personal projects.";
+      : copy[language].pageDescription;
     document.title = title;
     for (const [selector, content] of [
       ['meta[name="description"]', description],

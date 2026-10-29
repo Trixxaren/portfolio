@@ -9,20 +9,17 @@ export default function HeroSection({ language }) {
         <div className="hero-writing">
           <p className="eyebrow">
             <span className="live-dot" />{" "}
-            {sv
-              ? "AFFÄR, TEKNIK & ALLT DÄREMELLAN"
-              : "BUSINESS, TECHNOLOGY & EVERYTHING BETWEEN"}
+            {t.heroEyebrow}
           </p>
           <h1>
-            {sv ? "Affärsdriven," : "Business-minded,"}
+            {t.heroTitle[0]}
             <br />
-            <span>{sv ? "tekniskt nyfiken" : "technically curious"}</span>
+            <span>{t.heroTitle[1]}</span>
             <br />
-            {sv
-              ? "och bygger gärna egna projekt."
-              : "and always building personal projects."}
+            {t.heroTitle[2]}
           </h1>
           <p className="hero-intro">{t.intro}</p>
+          <p className="hero-intro">{t.introMore}</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#MyPortfolio">
               {sv ? "Se mina projekt" : "Explore my projects"}
@@ -47,7 +44,7 @@ export default function HeroSection({ language }) {
           <div className="portrait-caption">
             <span>
               <strong>Robin Vikström</strong>
-              <small>Sales Manager · Solvigo</small>
+              <small>{t.role}</small>
             </span>
           </div>
         </div>

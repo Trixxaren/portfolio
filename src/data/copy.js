@@ -4,28 +4,38 @@ export const copy = {
     skip: "Hoppa till innehåll",
     menu: "Meny",
     close: "Stäng",
-    role: "Sales Manager",
+    role: "Affärsutveckling · Kundrelationer · Teknik",
     location: "Stockholm, Sverige",
-    footerNote: "Robin Vikström · Bygger, utforskar, lär.",
+    footerNote: "Robin Vikström · Affärer, idéer och utveckling.",
     backTop: "Till toppen",
+    heroEyebrow: "AFFÄR, MÄNNISKOR & TEKNIK",
+    heroTitle: ["Affärsdriven,", "nyfiken", "och gillar att göra idéer till verklighet."],
+    pageTitle: "Robin Vikström — Affärer, människor & teknik",
+    pageDescription: "Robin Vikström — erfarenhet inom försäljning, affärsutveckling och kundrelationer, kompletterad med teknisk utbildning och egna projekt inom AI och automatisering.",
     intro:
-      "Jag jobbar som Sales Manager med en kommersiell bakgrund och ett växande tekniskt fokus. Jag utforskar hur affär, produkt och AI kan mötas i lösningar som faktiskt används.",
+      "Min bakgrund finns inom försäljning, affärsutveckling och kundrelationer. Jag tycker om att förstå behov, bygga relationer och hitta lösningar som skapar värde.",
+    introMore:
+      "Mitt teknikintresse har också lett mig till att utforska digital produktutveckling, AI och automatisering. Här delar jag några av de projekt jag har arbetat med.",
     disciplines: ["Affär & behovsanalys", "Produkt & UX", "AI & system"],
     aboutTitle: "Kommersiell bakgrund. Teknisk nyfikenhet.",
     aboutP1:
-      "Min bakgrund finns inom försäljning, kunddialog och affärsutveckling. Idag arbetar jag som Sales Manager på Solvigo, ett AI- och teknikbolag, samtidigt som jag studerar och fördjupar mig inom fullstack, AI, teknisk projektledning och automation.",
+      "Jag har flera års erfarenhet av försäljning, kundrelationer och affärsutveckling från bland annat bygg, fordon, media och teknik. Jag har arbetat med både nya och befintliga kunder, större affärer och långsiktiga samarbeten.",
     aboutP2:
-      "Jag vill förstå hur delarna hänger ihop: arkitektur, API:er, databaser, frontend och backend. Genom egna projekt lär jag mig att gå från ett affärsproblem till struktur, tekniska val och en fungerande lösning. Jag trivs när jag får lösa problem som kräver att jag tänker om, lär mig något nytt och hittar en väg framåt.",
+      "Jag trivs när jag får ta ansvar, förstå ett problem och hitta lösningar tillsammans med andra. Jag gillar att förbättra arbetssätt, utveckla idéer och framför allt se till att saker faktiskt blir gjorda.",
+    aboutP3:
+      "Mitt intresse för teknik ledde mig till en utbildning inom frontendutveckling och senare till egna projekt inom AI, automatisering och digital produktutveckling.",
+    aboutP4:
+      "För mig handlar tekniken inte bara om att bygga system, utan om hur den kan hjälpa människor och företag att arbeta smartare.",
     belief:
-      "Jag vill kunna diskutera arkitektur, ifrågasätta tekniska val och driva projekt med både användaren och verksamheten i åtanke.",
-    learningNow: "Det jag fördjupar mig i",
+      "Jag vill bidra med affärsförståelse, kundperspektiv och initiativ som förbättrar verksamheten.",
+    learningNow: "Mina kompetensområden",
     learningAreas: [
-      "Fullstackutveckling",
       "Affärsutveckling",
-      "AI-workflows & automation",
-      "Teknisk projektledning",
+      "Försäljning & kundrelationer",
+      "Process- & verksamhetsförbättring",
+      "AI & digitalisering",
     ],
-    learningNote: "Lär genom att bygga och arbeta med i vardagen",
+    learningNote: "Erfarenhet från affärslivet, kompletterad med teknisk utbildning och praktiska projekt.",
     approach: [
       [
         "Förstå problemet",
@@ -33,7 +43,7 @@ export const copy = {
       ],
       [
         "Skapa struktur",
-        "Bryt ned behovet i flöden, data och tydliga tekniska beslut.",
+        "Gör behovet tydligt och omsätt det i prioriteringar och konkreta nästa steg.",
       ],
       [
         "Bygg och lär",
@@ -47,7 +57,7 @@ export const copy = {
     contactTitle: "Ska vi prata",
     contactItalic: "om en idé?",
     contactIntro:
-      "Jag pratar gärna om produktutveckling, AI och tekniska projekt. Eller om något du själv håller på att bygga.",
+      "Jag pratar gärna om affärer, kundrelationer, utveckling och nya idéer. Oavsett om det handlar om ett möjligt samarbete, en spännande möjlighet eller något du vill diskutera är du välkommen att höra av dig.",
     name: "Namn",
     email: "E-post",
     message: "Vad har du i tankarna?",
@@ -70,28 +80,38 @@ export const copy = {
     skip: "Skip to content",
     menu: "Menu",
     close: "Close",
-    role: "Sales Manager",
+    role: "Business Development · Client Relationships · Technology",
     location: "Stockholm, Sweden",
-    footerNote: "Robin Vikström · Building, exploring, learning.",
+    footerNote: "Robin Vikström · Business, ideas and development.",
     backTop: "Back to top",
+    heroEyebrow: "BUSINESS, PEOPLE & TECHNOLOGY",
+    heroTitle: ["Business-minded,", "curious", "and keen to turn ideas into reality."],
+    pageTitle: "Robin Vikström — Business, people & technology",
+    pageDescription: "Robin Vikström — experience in sales, business development and client relationships, complemented by technical education and personal projects in AI and automation.",
     intro:
-      "I work as a Sales Manager with a commercial background and a growing technical focus. I explore how business, product, and AI come together in solutions people actually use.",
+      "My background is in sales, business development and client relationships. I enjoy understanding needs, building relationships and finding solutions that create value.",
+    introMore:
+      "My interest in technology has also led me to explore digital product development, AI and automation. Here I share some of the projects I have worked on.",
     disciplines: ["Business & discovery", "Product & UX", "AI & systems"],
     aboutTitle: "Commercial background. Technical curiosity.",
     aboutP1:
-      "My background is in sales, customer conversations, and business development. Today I work as a Sales Manager at Solvigo, an AI and technology company, while studying and developing my skills in fullstack development, AI, technical project management, and automation.",
+      "I have several years of experience in sales, client relationships and business development across construction, automotive, media and technology. My work has included winning new business, Key Account Management, larger deals and long-term client partnerships.",
     aboutP2:
-      "I want to understand how the pieces connect: architecture, APIs, databases, frontend, and backend. Building personal projects helps me move from a business problem to structure, technical decisions, and a working solution. I enjoy solving problems that challenge me to rethink, learn something new, and find a way forward.",
+      "I enjoy taking responsibility, understanding a problem and working with others to find a solution. I like improving ways of working, developing ideas and, above all, getting things done.",
+    aboutP3:
+      "My interest in technology led me to complete a frontend development programme and later to build personal projects in AI, automation and digital product development.",
+    aboutP4:
+      "For me, technology is about more than building systems. It is about helping people and businesses work smarter.",
     belief:
-      "I want to discuss architecture, challenge technical decisions, and lead projects with both the user and the business in mind.",
-    learningNow: "What I’m learning",
+      "I want to contribute business understanding, a client perspective and initiatives that improve how a business works.",
+    learningNow: "My areas of expertise",
     learningAreas: [
-      "Fullstack development",
       "Business development",
-      "AI workflows & automation",
-      "Technical project management",
+      "Sales & client relationships",
+      "Process & business improvement",
+      "AI & digitalisation",
     ],
-    learningNote: "Learning by building and applying it in everyday work",
+    learningNote: "Commercial experience, complemented by technical education and hands-on projects.",
     approach: [
       [
         "Understand the problem",
@@ -99,7 +119,7 @@ export const copy = {
       ],
       [
         "Create structure",
-        "Break the need down into workflows, data, and clear technical decisions.",
+        "Clarify the need and turn it into priorities and practical next steps.",
       ],
       [
         "Build and learn",
@@ -113,7 +133,7 @@ export const copy = {
     contactTitle: "Have an idea",
     contactItalic: "in mind?",
     contactIntro:
-      "I’m always happy to talk about product development, AI, and technical projects. Or something you’re building yourself.",
+      "I’m always happy to talk about business, client relationships, development and new ideas. Whether you have a potential collaboration, an interesting opportunity or something you would like to discuss, please get in touch.",
     name: "Name",
     email: "Email",
     message: "What’s on your mind?",

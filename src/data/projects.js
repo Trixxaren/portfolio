@@ -43,12 +43,12 @@ export const projects = [
 ],
     sv: {
       summary:
-        "Från research till uppföljning. Ett gemensamt workflow för B2B-försäljning, med AI-agenter och mänskliga beslut.",
+        "Ett säljsystem som samlar kundbearbetning, affärsmöjligheter och uppföljning i ett gemensamt arbetsflöde. Utvecklat för att skapa bättre struktur och minska manuellt arbete med hjälp av AI och automatisering.",
       problem:
         "Research, prospektering, mejl och uppföljningar innebär många manuella moment. Information och nästa steg behöver hänga ihop för att säljaren ska kunna fokusera på kunddialogen.",
       solution:
-        "Jag har byggt Sales-OS som Solvigos interna CRM + Business OS. Fullstack-appen samlar leadmotor, AI-agenter, pipeline, uppgifter och analys i ett gemensamt arbetsflöde. Regelverket styr vad agenterna får göra själva. En människa måste alltid godkänna mejlen innan de skickas.",
-      role: "Eget bygge: från behovsanalys, produktidé och arbetsflöden till UX, AI-assisterad implementation, testning och vidareutveckling. Jag använder min erfarenhet från försäljning för att definiera krav och testa verkliga scenarier.",
+        "Utifrån behov i försäljningsarbetet har jag drivit utvecklingen av Sales-OS som Solvigos interna CRM + Business OS. Systemet samlar leadmotor, AI-agenter, pipeline, uppgifter och analys i ett gemensamt arbetsflöde. Regelverket styr vad agenterna får göra själva. En människa måste alltid godkänna mejlen innan de skickas.",
+      role: "Jag har själv identifierat behovet, definierat funktioner och arbetsflöden samt styrt utvecklingen. AI-kodverktyg har genererat stora delar av koden. Mitt bidrag omfattar behovsanalys, prioriteringar, UX och testning av verkliga säljsituationer, med min kommersiella erfarenhet som utgångspunkt.",
       technology: [
         "Next.js 15",
         "TypeScript",
@@ -140,12 +140,12 @@ export const projects = [
     },
     en: {
       summary:
-        "From research to follow-up. One B2B sales workflow, with AI agents and human decisions.",
+        "A sales system that brings customer outreach, opportunities and follow-ups into one workflow. Developed to provide clearer structure and reduce manual work through AI and automation.",
       problem:
         "Research, prospecting, emails, and follow-ups involve many manual steps. Information and next actions need to connect so the salesperson can focus on the customer conversation.",
       solution:
-        "I built Sales-OS as Solvigo’s internal CRM + Business OS. The fullstack app brings a lead engine, AI agents, pipeline, tasks, and analytics into one workflow. Rules govern what agents may do independently. A person must always approve emails before they are sent.",
-      role: "My own build: from needs analysis, product concept, and workflows to UX, AI-assisted implementation, testing, and iteration. I use my sales experience to define requirements and test real scenarios.",
+        "Based on needs in the sales process, I led the development of Sales-OS as Solvigo’s internal CRM + Business OS. The system brings a lead engine, AI agents, pipeline, tasks and analytics into one workflow. Rules govern what agents may do independently. A person must always approve emails before they are sent.",
+      role: "I identified the need, defined the features and workflows, and directed development. AI coding tools generated much of the code. My contribution covers needs analysis, prioritisation, UX and testing real sales scenarios, drawing on my commercial experience.",
       technology: [
         "Next.js 15",
         "TypeScript",

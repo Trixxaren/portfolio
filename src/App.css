@@ -224,6 +224,9 @@ main:focus {
   color: var(--muted);
   max-width: 540px;
 }
+.hero-intro + .hero-intro {
+  margin-top: 16px;
+}
 .hero-actions {
   display: flex;
   align-items: center;

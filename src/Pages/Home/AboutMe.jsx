@@ -14,6 +14,8 @@ export default function AboutMe({ language }) {
           <h3>{t.aboutTitle}</h3>
           <p>{t.aboutP1}</p>
           <p>{t.aboutP2}</p>
+          <p>{t.aboutP3}</p>
+          <p>{t.aboutP4}</p>
           <a
             className="text-link"
             href={t.cvLink}
