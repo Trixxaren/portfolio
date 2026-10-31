@@ -1,4 +1,4 @@
-﻿import { copy } from "../../data/copy";
+import { copy } from "../../data/copy";
 export default function Footer({ language }) {
   const t = copy[language];
   return (
@@ -11,16 +11,16 @@ export default function Footer({ language }) {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub ↗
+            GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/robin-vikstr%C3%B6m-9959b6169/"
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn
           </a>
-          <a href="#top">{t.backTop} ↑</a>
+          <a href="#top">{t.backTop}</a>
         </div>
       </div>
     </footer>

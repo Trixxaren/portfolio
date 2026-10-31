@@ -1,6 +1,6 @@
-﻿import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FiMenu, FiX, FiArrowUpRight } from "react-icons/fi";
+import { FiMenu, FiX } from "react-icons/fi";
 import { copy } from "../../data/copy";
 export default function Navbar({ language, toggleLanguage }) {
   const { pathname } = useLocation();
@@ -59,7 +59,7 @@ export default function Navbar({ language, toggleLanguage }) {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub <FiArrowUpRight />
+            GitHub
           </a>
         </nav>
         <div className="header-controls">

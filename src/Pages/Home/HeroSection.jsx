@@ -1,4 +1,3 @@
-﻿import { FiArrowDownRight, FiArrowUpRight } from "react-icons/fi";
 import { copy } from "../../data/copy";
 export default function HeroSection({ language }) {
   const t = copy[language],
@@ -6,7 +5,7 @@ export default function HeroSection({ language }) {
   return (
     <section className="hero container" id="heroSection">
       <div className="hero-kicker">
-        <p className="eyebrow"><span className="live-dot" />{t.heroEyebrow}</p>
+        <p className="eyebrow">{t.heroEyebrow}</p>
         <span className="hero-location">{t.location}</span>
       </div>
       <div className="hero-content">
@@ -21,11 +20,11 @@ export default function HeroSection({ language }) {
           <div className="hero-actions">
             <a className="button button-primary" href="#MyPortfolio">
               {sv ? "Se mina projekt" : "Explore my projects"}
-              <FiArrowDownRight />
+
             </a>
             <a className="text-link" href="#AboutMe">
               {sv ? "Lite mer om mig" : "A little about me"}
-              <FiArrowUpRight />
+
             </a>
           </div>
         </div>
@@ -44,7 +43,7 @@ export default function HeroSection({ language }) {
               <strong>Robin Vikström</strong>
               <small>{t.role}</small>
             </span>
-            <FiArrowUpRight aria-hidden="true" />
+
           </div>
         </div>
       </div>

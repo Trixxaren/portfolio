@@ -1,7 +1,7 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
-import { FiArrowRight, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { projects, projectStatus } from "../../data/projects";
 import { copy } from "../../data/copy";
 import ProjectCover from "./ProjectCover";
@@ -112,7 +112,7 @@ export default function MyPortfolio({ language }) {
                 </ul>
                 <span className="project-read">
                   {sv ? "Läs om projektet" : "Explore the project"}
-                  <FiArrowRight aria-hidden="true" />
+
                 </span>
               </div>
             </Link>

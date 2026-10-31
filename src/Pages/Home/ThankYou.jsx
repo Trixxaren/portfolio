@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { copy } from "../../data/copy";
 export default function ThankYou({ language, notFound = false }) {
   const t = copy[language];
@@ -9,7 +9,7 @@ export default function ThankYou({ language, notFound = false }) {
       <p>{notFound ? t.notFoundText : t.thanksText}</p>
       <Link className="button button-primary" to="/">
         {t.home}
-        <span aria-hidden="true">↗</span>
+
       </Link>
     </section>
   );

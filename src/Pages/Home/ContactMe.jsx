@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
 import { copy } from "../../data/copy";
@@ -19,9 +19,6 @@ export default function ContactMe({ language }) {
             {t.contactTitle}
             <br />
             <em>{t.contactItalic}</em>
-            <span className="contact-arrow" aria-hidden="true">
-              ↗
-            </span>
           </h2>
           <p>{t.contactIntro}</p>
           <a
@@ -86,7 +83,7 @@ export default function ContactMe({ language }) {
             disabled={state.submitting}
           >
             {state.submitting ? t.sending : t.send}
-            <span aria-hidden="true">↗</span>
+
           </button>
           <span className="form-status" role="status">
             {state.submitting ? t.sending : ""}

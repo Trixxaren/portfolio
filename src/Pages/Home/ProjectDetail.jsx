@@ -1,5 +1,5 @@
-﻿import { Link, useParams } from "react-router-dom";
-import { FiArrowLeft, FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { Link, useParams } from "react-router-dom";
+import { FiArrowLeft, FiGithub } from "react-icons/fi";
 import { projects, projectStatus } from "../../data/projects";
 import ProjectCover from "./ProjectCover";
 import ScreenshotGallery from "./ScreenshotGallery";
@@ -82,7 +82,7 @@ export default function ProjectDetail({ language }) {
             >
               <FiGithub />
               GitHub
-              <FiArrowUpRight />
+
             </a>
           )}
           {project.demo && (
@@ -93,7 +93,7 @@ export default function ProjectDetail({ language }) {
               rel="noreferrer"
             >
               {labels.demo}
-              <FiArrowUpRight />
+
             </a>
           )}
         </div>
@@ -248,7 +248,7 @@ export default function ProjectDetail({ language }) {
         </Link>
         <Link to="/#Contact" className="text-link">
           {sv ? "Prata om projektet" : "Let’s talk about the project"}
-          <FiArrowUpRight />
+
         </Link>
       </div>
     </article>

@@ -1,4 +1,3 @@
-import { FiArrowUpRight } from "react-icons/fi";
 import { copy } from "../../data/copy";
 
 export default function AboutMe({ language }) {
@@ -12,14 +11,16 @@ export default function AboutMe({ language }) {
       <div className="about-grid">
         <h3 className="about-statement">{t.aboutTitle}</h3>
         <div className="about-prose">
-          <p>{t.aboutP1}</p>
-          <p>{t.aboutP2}</p>
-          <p>{t.aboutP3}</p>
-          <p>{t.aboutP4}</p>
-          <a className="text-link" href={t.cvLink} target="_blank" rel="noreferrer">
-            {t.cv}<FiArrowUpRight />
-          </a>
+          <div>
+            <p>{t.aboutP1}</p>
+            <p>{t.aboutP2}</p>
+          </div>
+          <div>
+            <p>{t.aboutP3}</p>
+            <p>{t.aboutP4}</p>
+          </div>
         </div>
+        <a className="button cv-link" href={t.cvLink} target="_blank" rel="noreferrer">{t.cv}</a>
       </div>
       <aside className="learning-note">
         <div className="learning-note-header"><span>{t.learningNow}</span></div>

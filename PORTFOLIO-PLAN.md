@@ -1,5 +1,16 @@
 # Portfolio — arbetsplan
 
+## Senaste finjustering — 2026-10-31
+
+Ta bort dekorativa pilar och kopparstrecket under porträttet. Funktionell
+bildbläddring, tillbaka-navigation och Visa fler/färre behålls. Visa Stockholm
+& Uppsala, Sverige (Sweden på engelska), även på mobil. Sammanhållna projektkort
+med en diskret ram och gemensam bakgrund. Om mig har en kopparfärgad rubrik över
+två jämställda textkolumner på desktop och en kolumn på mobil. CV-länken är en
+kopparfärgad knapp. Mobilrubriker, formulär och mellanbredder är justerade.
+Build, lint, SV/EN, samtliga projekt/gallerier, responsivitet 320–1440 px,
+projektknappens scroll/fokus och simulerade formulärsvar är kontrollerade.
+Ändringarna är lokala; ingen push eller publicering utan nytt godkännande.
 ## Gällande designriktning — The Modern Builder, 2026-10-31
 
 Robin begär en total visuell redesign enligt den senaste bifogade briefen.
