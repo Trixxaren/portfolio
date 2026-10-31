@@ -3,9 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { FiArrowRight, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { projects, projectStatus } from "../../data/projects";
+import { copy } from "../../data/copy";
 import ProjectCover from "./ProjectCover";
 export default function MyPortfolio({ language }) {
   const sv = language === "sv";
+  const t = copy[language];
   const [showAll, setShowAll] = useState(false);
   const grid = useRef(null);
   const toggle = useRef(null);
@@ -28,10 +30,9 @@ export default function MyPortfolio({ language }) {
     window.scrollTo({ top: startScroll, behavior: "instant" });
     const bounds = element.getBoundingClientRect();
     const layout = getComputedStyle(element);
-    const rows = layout.gridTemplateRows.split(" ").map(parseFloat);
-    const visibleRows = Math.ceil(6 / layout.gridTemplateColumns.split(" ").length);
-    const gap = parseFloat(layout.rowGap);
-    const collapsedHeight = rows.slice(0, visibleRows).reduce((sum, height) => sum + height, 0) + gap * (visibleRows - 1);
+    const cards = [...element.children];
+    // Layout offsets also support featured cards that span multiple columns.
+    const collapsedHeight = Math.max(...cards.slice(0, 6).map(card => card.offsetTop + card.offsetHeight));
     const endHeight = expanding
       ? bounds.height
       : collapsedHeight;
@@ -39,7 +40,7 @@ export default function MyPortfolio({ language }) {
     // Reveal the first extra card; on collapse keep the button in the same
     // viewport position while the list and scroll position shrink together.
     const targetScroll = expanding
-      ? bounds.top + collapsedHeight + gap + startScroll - headerHeight - 24
+      ? bounds.top + cards[6].offsetTop + startScroll - headerHeight - 24
       : startScroll + endHeight - startHeight;
     const endScroll = Math.max(0, expanding
       ? targetScroll
@@ -70,6 +71,7 @@ export default function MyPortfolio({ language }) {
   }
   return (
     <section className="work-section container" id="MyPortfolio">
+      <p className="eyebrow section-label">01 / {t.workEyebrow}</p>
       <div className="section-title-row">
         <h2>
           {sv
@@ -83,8 +85,8 @@ export default function MyPortfolio({ language }) {
           : "Personal projects. Explore the problem, the solution, and my role in each build."}
       </p>
       <div className="project-grid" id="portfolio-projects" ref={grid}>
-        {visibleProjects.map((project) => (
-          <article className="project-card" key={project.slug}>
+        {visibleProjects.map((project, index) => (
+          <article className={"project-card" + (project.slug === "sales-os" ? " project-featured" : "")} key={project.slug}>
             <Link
               className="project-card-link"
               to={"/projects/" + project.slug}
@@ -93,6 +95,7 @@ export default function MyPortfolio({ language }) {
               <ProjectCover project={project} language={language} />
               <div className="project-card-body">
                 <div className="project-card-meta">
+                  <span className="project-index">{project.slug === "sales-os" ? t.featuredCase : String(index + 1).padStart(2, "0")}</span>
                   <span className={"status status-" + project.status}>
                     {projectStatus[language][project.status]}
                   </span>

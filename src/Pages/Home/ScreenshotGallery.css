@@ -7,7 +7,7 @@
   margin: 0;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 12px 40px -28px #6c422f55;
 }
@@ -19,7 +19,7 @@
   gap: 16px;
   min-height: 46px;
   padding: 12px 20px;
-  background: #f4ece2;
+  background: #e4e6df;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
   font-size: 12px;
@@ -35,7 +35,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #bb9d83;
+  background: #8f988c;
 }
 
 .shot-gallery__open {
@@ -44,7 +44,7 @@
   width: 100%;
   padding: 0;
   border: 0;
-  background: #f4f0ea;
+  background: #f4f1ea;
   cursor: zoom-in;
 }
 
@@ -64,7 +64,7 @@
   gap: 8px;
   padding: 10px 14px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 3px;
   color: var(--ink);
   background: var(--surface);
   box-shadow: 0 3px 12px #332b2412;
@@ -77,7 +77,7 @@
 
 .shot-gallery__open:hover .shot-gallery__enlarge {
   color: var(--accent);
-  background: #fff6ed;
+  background: #f4f1ea;
 }
 
 .shot-gallery__open:focus-visible {
@@ -121,7 +121,7 @@
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 1px solid #c4ac96;
+  border: 1px solid #aeb6ab;
   border-radius: 50%;
   color: var(--ink);
   background: transparent;
@@ -134,7 +134,7 @@
 .shot-gallery__arrows button:hover,
 .shot-gallery__close:hover {
   color: var(--accent);
-  background: #f4e5d6;
+  background: #e4e6df;
   border-color: var(--accent);
 }
 
@@ -144,7 +144,7 @@
   overflow-x: auto;
   padding: 14px 5px 10px;
   scrollbar-width: thin;
-  scrollbar-color: #c4ac96 transparent;
+  scrollbar-color: #aeb6ab transparent;
 }
 
 .shot-gallery__thumb {
@@ -156,8 +156,8 @@
   flex-shrink: 0;
   padding: 4px;
   border: 2px solid transparent;
-  border-radius: 9px;
-  background: #f0e7dc;
+  border-radius: 3px;
+  background: #e4e6df;
   transition:
     border-color 180ms ease,
     background 180ms ease;
@@ -184,12 +184,12 @@
 }
 
 .shot-gallery__thumb:hover {
-  border-color: #c4ac96;
+  border-color: #aeb6ab;
 }
 
 .shot-gallery__thumb[aria-pressed="true"] {
   border-color: var(--accent);
-  background: #f4e5d6;
+  background: #e4e6df;
 }
 
 .shot-gallery__dialog {
@@ -198,7 +198,7 @@
   max-height: calc(100dvh - 48px);
   padding: 0;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 4px;
   overflow: auto;
   overscroll-behavior: contain;
   color: var(--ink);
@@ -211,7 +211,7 @@
 }
 
 .shot-gallery__dialog::backdrop {
-  background: #261b11b3;
+  background: #17232cbb;
   backdrop-filter: blur(5px);
 }
 
@@ -232,7 +232,7 @@
 .shot-gallery__dialog-image {
   display: grid;
   place-items: center;
-  background: #f4f0ea;
+  background: #f4f1ea;
 }
 
 .shot-gallery__dialog-image img {
@@ -278,7 +278,7 @@
   .shot-gallery__dialog {
     width: calc(100vw - 20px);
     max-height: calc(100dvh - 20px);
-    border-radius: 12px;
+    border-radius: 4px;
   }
   .shot-gallery__dialog-header {
     padding: 12px 16px;

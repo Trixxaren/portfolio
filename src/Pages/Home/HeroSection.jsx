@@ -5,17 +5,15 @@ export default function HeroSection({ language }) {
     sv = language === "sv";
   return (
     <section className="hero container" id="heroSection">
+      <div className="hero-kicker">
+        <p className="eyebrow"><span className="live-dot" />{t.heroEyebrow}</p>
+        <span className="hero-location">{t.location}</span>
+      </div>
       <div className="hero-content">
         <div className="hero-writing">
-          <p className="eyebrow">
-            <span className="live-dot" />{" "}
-            {t.heroEyebrow}
-          </p>
           <h1>
-            {t.heroTitle[0]}
-            <br />
-            <span>{t.heroTitle[1]}</span>
-            <br />
+            {t.heroTitle[0]}{" "}
+            <span>{t.heroTitle[1]}</span>{" "}
             {t.heroTitle[2]}
           </h1>
           <p className="hero-intro">{t.intro}</p>
@@ -46,6 +44,7 @@ export default function HeroSection({ language }) {
               <strong>Robin Vikström</strong>
               <small>{t.role}</small>
             </span>
+            <FiArrowUpRight aria-hidden="true" />
           </div>
         </div>
       </div>

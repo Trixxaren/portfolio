@@ -30,11 +30,7 @@ export default function Navbar({ language, toggleLanguage }) {
       </a>
       <div className="container header-inner">
         <Link to="/" className="profile-brand" aria-label={language === "sv" ? "Robin Vikström — startsida" : "Robin Vikström — home"} onClick={goToTop}>
-          <svg className="brand-monogram" viewBox="0 0 44 44" fill="none" aria-hidden="true">
-            <rect x="1" y="1" width="42" height="42" rx="13" fill="currentColor" />
-            <path d="M12 31V13H20C28 13 28 23 20 23H12M20 23L27 31L34 13" stroke="var(--surface)" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span className="brand-name">Robin<span>Vikström<span className="brand-period">.</span></span></span>
+          <span className="brand-name">Robin <strong>Vikström</strong><span className="brand-period">.</span></span>
         </Link>
         <nav
           id="main-navigation"
@@ -74,7 +70,9 @@ export default function Navbar({ language, toggleLanguage }) {
               language === "sv" ? "Switch to English" : "Byt till svenska"
             }
           >
-            {language === "sv" ? "English" : "Svenska"}
+            <span className={language === "sv" ? "language-active" : ""}>SV</span>
+            <span className="language-divider" aria-hidden="true">/</span>
+            <span className={language === "en" ? "language-active" : ""}>EN</span>
           </button>
           <button
             className="menu-button"

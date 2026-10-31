@@ -1,6 +1,29 @@
-﻿# Portfolio — arbetsplan
+# Portfolio — arbetsplan
 
-## Gällande riktning — 2026-10-29
+## Gällande designriktning — The Modern Builder, 2026-10-31
+
+Robin begär en total visuell redesign enligt den senaste bifogade briefen.
+Checkpoint 687037b är redan pushad. Den nya designen granskas lokalt före
+ytterligare push/publicering. Detta ersätter tidigare begränsningar om att
+bevara den gamla designen; aktuell karriärprofil och faktainnehåll bevaras.
+
+Designsystem: varm elfenben #F4F1EA, grafit #17232C, koppar #C16D48 som
+sparsam dekorativ accent och mörkare koppar för läsbar text, dämpad salvia.
+Manrope för rubriker och DM Sans för text återanvänds. Redaktionell layout
+med tydliga linjer, stora rubriker, få rundningar och ett personligt porträtt.
+Sales-OS blir ett stort framhävt case. Övriga projekt får raka bilder och
+tydlig typografi. Om mig och kompetenser får en luftig redaktionell struktur;
+arbetsfilosofin visas i tre steg och kontakten avslutar i mörk grafit.
+
+Behåll sju projekt, faktainnehåll, CV-filer, kontaktlogik, språkväxling,
+projektgallerier och mjuk Visa fler/färre. Befintlig React/Vite-stack och
+animationsverktyg behålls. Inga nya beroenden, backend eller AI-porträtt.
+Kontrollera desktop/mobil, båda språk, projektsidor, gallerier, navigation,
+CV, simulerade formulärsvar, reducerad rörelse, build och lint.
+
+Redesignen är implementerad lokalt och verifierad på mobil/desktop samt SV/EN. Se docs/MODERN-BUILDER-REDESIGN.md för omfattning och kontroller.
+
+## Gällande innehållsriktning — 2026-10-29
 
 Den nya karriärprofilen ersätter tidigare personliga presentationer nedan.
 Robin är en affärsperson med teknisk förståelse: försäljning,
@@ -8,8 +31,8 @@ affärsutveckling, kundrelationer, Key Account Management samt projekt- och
 verksamhetsutveckling. Frontendutbildningen är avslutad. Teknikintresset
 och egna projekt finns kvar, utan att profilen främst riktas mot utvecklarjobb.
 
-Enbart innehåll uppdateras på svenska och engelska. Behåll design, struktur,
-funktioner, bilder, projekt och ordning. Sales-OS ligger först. Robins roll
+Innehållet är uppdaterat på svenska och engelska. Behåll funktioner,
+bilder, projekt och ordning. Sales-OS ligger först. Robins roll
 beskrivs som behovsanalys, funktionsdefinition och styrning av utvecklingen;
 AI-kodverktyg har genererat stora delar av koden. Övriga projektdata bevaras.
 
@@ -20,7 +43,7 @@ De finns oförändrade i public/cv och länkas från respektive språkversion.
 Google Drive-länkarna är ersatta. Se docs/CAREER-PROFILE-UPDATE.md för kontroller.
 
 Localhost för denna granskning: http://localhost:5174 (5173 är upptagen).
-Ingen separat driftsättning görs; tidigare godkännande för GitHub-push gäller.
+Checkpoint är pushad; nästa redesign behålls lokalt för granskning.
 
 ## Tidigare riktning (2026-10-01)
 
