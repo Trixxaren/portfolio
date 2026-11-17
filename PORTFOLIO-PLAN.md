@@ -1,5 +1,12 @@
 # Portfolio — arbetsplan
 
+## Finjustering — 2026-11-18
+
+Skriv om presentationen och Sales-OS-texten utan företagsnamnet Solvigo i båda
+språken. Återställ 01, 02 och 03 vid Förstå problemet, Skapa struktur och Bygg
+och lär. Övriga förenklingar behålls. Robin har godkänt push till GitHub av
+den uppdaterade portfolion efter verifiering.
+
 ## Aktuell riktning — 2026-11-17
 
 Utgå från de senaste svenska och engelska CV-filerna. Lyft Account Management,

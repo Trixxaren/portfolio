@@ -29,8 +29,9 @@ export default function AboutMe({ language }) {
         <h3>{t.approachHeading}</h3>
       </div>
       <div className="approach-grid">
-        {t.approach.map(([title, text]) => (
+        {t.approach.map(([title, text], index) => (
           <article key={title}>
+            <span className="approach-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
             <h3>{title}</h3>
             <p>{text}</p>
           </article>

@@ -47,7 +47,7 @@ export const projects = [
       problem:
         "Research, prospektering, mejl och uppföljningar innebär många manuella moment. Information och nästa steg behöver hänga ihop för att säljaren ska kunna fokusera på kunddialogen.",
       solution:
-        "På Solvigo initierade och drev jag utvecklingen av ett internt CRM- och säljsystem. Sales-OS samlar prospektering, pipeline, uppgifter och analys. AI-agenter förbereder arbetet och en människa godkänner mejlen före utskick.",
+        "Jag initierade och drev utvecklingen av Sales-OS utifrån behov i det dagliga säljarbetet. Systemet samlar prospektering, pipeline, uppgifter och analys. AI-agenter förbereder arbetet och en människa godkänner mejlen före utskick.",
       role: "Jag identifierade behovet och ansvarade för kravställning, planering och instruktioner till AI-verktygen. Jag definierade arbetsflöden, prioriterade funktioner och testade säljsituationer. AI-kodverktyg genererade stora delar av koden.",
       technology: [
         "Next.js 15",
@@ -143,7 +143,7 @@ export const projects = [
       problem:
         "Research, prospecting, emails, and follow-ups involve many manual steps. Information and next actions need to connect so the salesperson can focus on the customer conversation.",
       solution:
-        "At Solvigo, I initiated and drove the development of an internal CRM and sales system. Sales-OS connects prospecting, pipeline, tasks and analytics. AI agents prepare the work and a person approves emails before sending.",
+        "I initiated and drove the development of Sales-OS based on needs in day-to-day sales work. The system connects prospecting, pipeline, tasks and analytics. AI agents prepare the work and a person approves emails before sending.",
       role: "I identified the need and was responsible for requirements, planning and instructions to the AI tools. I defined workflows, prioritised features and tested sales scenarios. AI coding tools generated much of the code.",
       technology: [
         "Next.js 15",

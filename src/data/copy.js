@@ -23,7 +23,7 @@ export const copy = {
     aboutP2:
       "Jag har drivit hela affärsprocessen, från prospektering och behovsanalys till förhandling, avtal och uppföljning. Jag trivs med ansvar och att lösa problem tillsammans med andra.",
     aboutP3:
-      "På Solvigo initierade och drev jag AI-assisterad utveckling av ett internt CRM- och säljsystem. Jag ansvarade för kravställning, planering och instruktioner till AI-verktygen.",
+      "Jag använder gärna teknik för att förenkla arbetet i vardagen. Ett exempel är Sales-OS, ett CRM- och säljsystem där jag drev utvecklingen med AI-verktyg, från behov och planering till testning.",
     aboutP4:
       "Min YH-examen i frontendutveckling från Jensen kompletterar affärserfarenheten med kunskap inom React, TypeScript, API-integrationer och UX/UI.",
     learningNow: "Kompetensområden",
@@ -95,7 +95,7 @@ export const copy = {
     aboutP2:
       "I have managed the full sales process, from prospecting and needs analysis to negotiation, contracts and follow-up. I enjoy taking responsibility and solving problems with others.",
     aboutP3:
-      "At Solvigo, I initiated and drove AI-assisted development of an internal CRM and sales system. I was responsible for requirements, planning and instructions to the AI tools.",
+      "I enjoy using technology to simplify everyday work. One example is Sales-OS, a CRM and sales system whose development I led using AI tools, from defining needs and planning to testing.",
     aboutP4:
       "My Higher Vocational Education Diploma in frontend development from Jensen complements my commercial experience with knowledge of React, TypeScript, API integration and UX/UI.",
     learningNow: "Areas of experience",
