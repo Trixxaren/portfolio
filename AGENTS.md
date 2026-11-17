@@ -7,7 +7,8 @@
   slogans and overstated technical experience or product outcomes.
 - Sales-OS is Robin's own build according to his latest clarification. This
   supersedes the earlier description of shared authorship.
-- Distinguish completed projects, ongoing work and concepts in both languages.
+- Do not display project completion statuses, following Robin's latest request.
+  Keep descriptions of actual functionality and demo scope accurate in both languages.
 - Project records live in `src/data/projects.js`; personal/UI copy lives in
   `src/data/copy.js`. Do not invent missing project details or links.
 - Run build and lint after implementation changes and verify affected browser

@@ -43,12 +43,12 @@ export const projects = [
 ],
     sv: {
       summary:
-        "Ett säljsystem som samlar kundbearbetning, affärsmöjligheter och uppföljning i ett gemensamt arbetsflöde. Utvecklat för att skapa bättre struktur och minska manuellt arbete med hjälp av AI och automatisering.",
+        "Ett CRM- och säljsystem som samlar prospektering, kunddialog och uppföljning med stöd av AI.",
       problem:
         "Research, prospektering, mejl och uppföljningar innebär många manuella moment. Information och nästa steg behöver hänga ihop för att säljaren ska kunna fokusera på kunddialogen.",
       solution:
-        "Utifrån behov i försäljningsarbetet har jag drivit utvecklingen av Sales-OS som Solvigos interna CRM + Business OS. Systemet samlar leadmotor, AI-agenter, pipeline, uppgifter och analys i ett gemensamt arbetsflöde. Regelverket styr vad agenterna får göra själva. En människa måste alltid godkänna mejlen innan de skickas.",
-      role: "Jag har själv identifierat behovet, definierat funktioner och arbetsflöden samt styrt utvecklingen. AI-kodverktyg har genererat stora delar av koden. Mitt bidrag omfattar behovsanalys, prioriteringar, UX och testning av verkliga säljsituationer, med min kommersiella erfarenhet som utgångspunkt.",
+        "På Solvigo initierade och drev jag utvecklingen av ett internt CRM- och säljsystem. Sales-OS samlar prospektering, pipeline, uppgifter och analys. AI-agenter förbereder arbetet och en människa godkänner mejlen före utskick.",
+      role: "Jag identifierade behovet och ansvarade för kravställning, planering och instruktioner till AI-verktygen. Jag definierade arbetsflöden, prioriterade funktioner och testade säljsituationer. AI-kodverktyg genererade stora delar av koden.",
       technology: [
         "Next.js 15",
         "TypeScript",
@@ -126,7 +126,7 @@ export const projects = [
         ],
         [
           "Mät innan du optimerar",
-          "Mejlvarianterna CONTROL, V2 och V3 används i experiment, med V3 som aktuell variant. Triggertyp, sökmetod och svarstyp sparas för analys.",
+          "Mejlvarianter jämförs i experiment. Triggertyp, sökmetod och svarstyp sparas för analys.",
         ],
       ],
       learning: [
@@ -134,18 +134,17 @@ export const projects = [
         "UX handlar också om att välja vilken komplexitet användaren ska behöva se.",
         "Strukturerade beslut och tydliga stoppvillkor är viktiga när AI ingår i ett arbetsflöde.",
       ],
-      next: "Fortsatt utveckling av arbetsflöden och analys inom samma system. Den insamlade datan ska användas för att undersöka vilka signaler och budskap som ger svar.",
       analytics:
         "Översikt, säljmål, pipeline och prognoser hör till samma CRM. Experimentdata kopplar samman prospekteringens signaler med mejlvariant och svarstyp, så att det går att undersöka vad som händer från research till uppföljning.",
     },
     en: {
       summary:
-        "A sales system that brings customer outreach, opportunities and follow-ups into one workflow. Developed to provide clearer structure and reduce manual work through AI and automation.",
+        "A CRM and sales system that brings prospecting, client communication and follow-up together with support from AI.",
       problem:
         "Research, prospecting, emails, and follow-ups involve many manual steps. Information and next actions need to connect so the salesperson can focus on the customer conversation.",
       solution:
-        "Based on needs in the sales process, I led the development of Sales-OS as Solvigo’s internal CRM + Business OS. The system brings a lead engine, AI agents, pipeline, tasks and analytics into one workflow. Rules govern what agents may do independently. A person must always approve emails before they are sent.",
-      role: "I identified the need, defined the features and workflows, and directed development. AI coding tools generated much of the code. My contribution covers needs analysis, prioritisation, UX and testing real sales scenarios, drawing on my commercial experience.",
+        "At Solvigo, I initiated and drove the development of an internal CRM and sales system. Sales-OS connects prospecting, pipeline, tasks and analytics. AI agents prepare the work and a person approves emails before sending.",
+      role: "I identified the need and was responsible for requirements, planning and instructions to the AI tools. I defined workflows, prioritised features and tested sales scenarios. AI coding tools generated much of the code.",
       technology: [
         "Next.js 15",
         "TypeScript",
@@ -220,7 +219,7 @@ export const projects = [
         ],
         [
           "Measure before optimising",
-          "Email variants CONTROL, V2, and V3 support experiments, with V3 the current variant. Trigger type, search method, and reply type are recorded for analysis.",
+          "Email variants are compared in experiments. Trigger type, search method and reply type are recorded for analysis.",
         ],
       ],
       learning: [
@@ -228,7 +227,6 @@ export const projects = [
         "UX includes deciding how much system complexity the user needs to see.",
         "Structured decisions and clear stopping conditions matter when AI is part of a workflow.",
       ],
-      next: "Continued development of workflows and analytics within the same system. The collected data will be used to investigate which signals and messages lead to replies.",
       analytics:
         "Overview, sales targets, pipeline, and forecasts belong to the same CRM. Experiment data connects prospecting signals with email variants and reply types, making it possible to examine the journey from research to follow-up.",
     },
@@ -285,8 +283,7 @@ export const projects = [
         "Spelaren förutsäger ett resultat och ser konkret återkoppling. Ledtrådar kan användas utan poängavdrag."
       ]
     ],
-    "learning": [],
-    "next": "Spelbar lokal prototyp under utveckling. Nästa kapitel är inte byggt. Begriplighet, pedagogisk effekt och fysisk mobilanvändning behöver fortsatta tester."
+    "learning": []
   },
   "en": {
     "summary": "A learning adventure where players explore the difference between temporary memory and saved information.",
@@ -320,8 +317,7 @@ export const projects = [
         "Players predict an outcome and receive concrete feedback. Hints are available without a points penalty."
       ]
     ],
-    "learning": [],
-    "next": "A playable local prototype in development. The next chapter is not built. Clarity, learning outcomes, and physical mobile use need further testing."
+    "learning": []
   }
 },
 {
@@ -352,7 +348,7 @@ export const projects = [
     }
   ],
   "sv": {
-    "summary": "Från en första idé till en strukturerad produktplan. En lokal studio för att utforska funktioner, design och teknikval.",
+    "summary": "En lokal studio som hjälper användaren att strukturera en produktidé och välja funktioner, design och teknik.",
     "problem": "En produktidé behöver bli konkret innan utvecklingen börjar: vad ska byggas, hur ska det fungera och vilka teknikval passar?",
     "solution": "En fungerande frontend-MVP med sex steg, fem mallar och tre interaktiva designriktningar. Modulval, teknikförklaringar och JSON-export samlar besluten i en produktplan.",
     "role": "Eget projekt inom produktutveckling, UX och teknisk planering.",
@@ -383,11 +379,10 @@ export const projects = [
         "Tre interaktiva designriktningar gör det möjligt att prova olika gränssnitt innan ett uttryckligt designval sparas."
       ]
     ],
-    "learning": [],
-    "next": "Lokal MVP under utveckling. Backend, konton, synkronisering och en verklig utvecklingsmotor ingår inte i den nuvarande versionen."
+    "learning": []
   },
   "en": {
-    "summary": "From an initial idea to a structured product plan. A local studio for exploring features, design, and technology choices.",
+    "summary": "A local studio for structuring a product idea and choosing features, design and technology.",
     "problem": "A product idea needs to become concrete before development starts: what to build, how it should work, and which technologies fit.",
     "solution": "A working frontend MVP with six steps, five templates, and three interactive design directions. Module selection, technical explanations, and JSON export bring the decisions into one product plan.",
     "role": "A personal project in product development, UX, and technical planning.",
@@ -418,8 +413,7 @@ export const projects = [
         "Three interactive design directions let users try different interfaces before explicitly saving a design choice."
       ]
     ],
-    "learning": [],
-    "next": "A local MVP in development. The current version does not include a backend, accounts, synchronisation, or an actual development engine."
+    "learning": []
   }
 },
   {
@@ -455,7 +449,6 @@ export const projects = [
       architecture: [],
       decisions: [],
       learning: [],
-      next: "",
     },
     en: {
       summary:
@@ -469,7 +462,6 @@ export const projects = [
       architecture: [],
       decisions: [],
       learning: [],
-      next: "",
     },
   },
   {
@@ -514,7 +506,6 @@ export const projects = [
       ],
       decisions: [],
       learning: [],
-      next: "",
     },
     en: {
       summary:
@@ -532,7 +523,6 @@ export const projects = [
       ],
       decisions: [],
       learning: [],
-      next: "",
     },
   },
   {
@@ -578,7 +568,6 @@ export const projects = [
       ],
       decisions: [],
       learning: [],
-      next: "",
     },
     en: {
       summary:
@@ -602,7 +591,6 @@ export const projects = [
       ],
       decisions: [],
       learning: [],
-      next: "",
     },
   },
   {
@@ -633,7 +621,6 @@ export const projects = [
       architecture: [],
       decisions: [],
       learning: [],
-      next: "",
     },
     en: {
       summary: "A personal digital invitation with a simple way to RSVP.",
@@ -646,16 +633,7 @@ export const projects = [
       architecture: [],
       decisions: [],
       learning: [],
-      next: "",
     },
   },
 
 ];
-export const statusLabels = {
-  sv: { all: "Alla", ongoing: "Pågående", completed: "Färdiga" },
-  en: { all: "All", ongoing: "In progress", completed: "Completed" },
-};
-export const projectStatus = {
-  sv: { ongoing: "Pågående", completed: "Färdigt projekt", concept: "Koncept" },
-  en: { ongoing: "In progress", completed: "Completed", concept: "Concept" },
-};

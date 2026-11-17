@@ -4,41 +4,35 @@ export const copy = {
     skip: "Hoppa till innehåll",
     menu: "Meny",
     close: "Stäng",
-    role: "Affärsutveckling · Kundrelationer · Teknik",
-    location: "Stockholm & Uppsala, Sverige",
-    footerNote: "Robin Vikström · Affärer, idéer och utveckling.",
+    role: "Account Management · Affärsutveckling",
+    location: "Stockholm, Sverige",
+    footerNote: "Robin Vikström",
     backTop: "Till toppen",
     heroEyebrow: "AFFÄR, MÄNNISKOR & TEKNIK",
-    workEyebrow: "UTVALDA PROJEKT",
-    featuredCase: "Utvalt case",
-    approachHeading: "Från förståelse till handling.",
-    heroTitle: ["Affärsdriven,", "nyfiken", "och gillar att göra idéer till verklighet."],
+    approachHeading: "Så arbetar jag",
+    heroTitle: ["Affärsdriven,", "nyfiken", "och gillar att bygga."],
     pageTitle: "Robin Vikström — Affärer, människor & teknik",
-    pageDescription: "Robin Vikström — erfarenhet inom försäljning, affärsutveckling och kundrelationer, kompletterad med teknisk utbildning och egna projekt inom AI och automatisering.",
+    pageDescription: "Robin Vikström — Account Management, Key Account Management och affärsutveckling. YH-examen i frontendutveckling och egna projekt inom AI och automatisering.",
     intro:
-      "Min bakgrund finns inom försäljning, affärsutveckling och kundrelationer. Jag tycker om att förstå behov, bygga relationer och hitta lösningar som skapar värde.",
+      "Jag har erfarenhet av B2B- och B2C-försäljning, Account Management och Key Account Management. Jag gillar att utveckla kundrelationer, skapa affärer och förbättra arbetssätt.",
     introMore:
-      "Mitt teknikintresse har också lett mig till att utforska digital produktutveckling, AI och automatisering. Här delar jag några av de projekt jag har arbetat med.",
-    disciplines: ["Affär & behovsanalys", "Produkt & UX", "AI & system"],
+      "Med en YH-examen i frontendutveckling utforskar jag också AI och automatisering genom egna projekt.",
     aboutTitle: "Kommersiell bakgrund. Teknisk nyfikenhet.",
     aboutP1:
-      "Jag har flera års erfarenhet av försäljning, kundrelationer och affärsutveckling från bland annat bygg, fordon, media och teknik. Jag har arbetat med både nya och befintliga kunder, större affärer och långsiktiga samarbeten.",
+      "Min bakgrund finns inom media, fordon, teknik och bygg. Jag har haft kund- och budgetansvar för lokala och nationella företagskunder.",
     aboutP2:
-      "Jag trivs när jag får ta ansvar, förstå ett problem och hitta lösningar tillsammans med andra. Jag gillar att förbättra arbetssätt, utveckla idéer och framför allt se till att saker faktiskt blir gjorda.",
+      "Jag har drivit hela affärsprocessen, från prospektering och behovsanalys till förhandling, avtal och uppföljning. Jag trivs med ansvar och att lösa problem tillsammans med andra.",
     aboutP3:
-      "Mitt intresse för teknik ledde mig till en utbildning inom frontendutveckling och senare till egna projekt inom AI, automatisering och digital produktutveckling.",
+      "På Solvigo initierade och drev jag AI-assisterad utveckling av ett internt CRM- och säljsystem. Jag ansvarade för kravställning, planering och instruktioner till AI-verktygen.",
     aboutP4:
-      "För mig handlar tekniken inte bara om att bygga system, utan om hur den kan hjälpa människor och företag att arbeta smartare.",
-    belief:
-      "Jag vill bidra med affärsförståelse, kundperspektiv och initiativ som förbättrar verksamheten.",
-    learningNow: "Mina kompetensområden",
+      "Min YH-examen i frontendutveckling från Jensen kompletterar affärserfarenheten med kunskap inom React, TypeScript, API-integrationer och UX/UI.",
+    learningNow: "Kompetensområden",
     learningAreas: [
       "Affärsutveckling",
-      "Försäljning & kundrelationer",
-      "Process- & verksamhetsförbättring",
-      "AI & digitalisering",
+      "Account Management",
+      "Planering & samordning",
+      "AI & automatisering",
     ],
-    learningNote: "Erfarenhet från affärslivet, kompletterad med teknisk utbildning och praktiska projekt.",
     approach: [
       [
         "Förstå problemet",
@@ -59,7 +53,7 @@ export const copy = {
     contactTitle: "Ska vi prata",
     contactItalic: "om en idé?",
     contactIntro:
-      "Jag pratar gärna om affärer, kundrelationer, utveckling och nya idéer. Oavsett om det handlar om ett möjligt samarbete, en spännande möjlighet eller något du vill diskutera är du välkommen att höra av dig.",
+      "Vill du prata om en roll, ett samarbete eller en idé? Hör gärna av dig.",
     name: "Namn",
     email: "E-post",
     message: "Vad har du i tankarna?",
@@ -82,41 +76,35 @@ export const copy = {
     skip: "Skip to content",
     menu: "Menu",
     close: "Close",
-    role: "Business Development · Client Relationships · Technology",
-    location: "Stockholm & Uppsala, Sweden",
-    footerNote: "Robin Vikström · Business, ideas and development.",
+    role: "Account Management · Business Development",
+    location: "Stockholm, Sweden",
+    footerNote: "Robin Vikström",
     backTop: "Back to top",
     heroEyebrow: "BUSINESS, PEOPLE & TECHNOLOGY",
-    workEyebrow: "SELECTED PROJECTS",
-    featuredCase: "Featured case",
-    approachHeading: "From understanding to action.",
-    heroTitle: ["Business-minded,", "curious", "and keen to turn ideas into reality."],
+    approachHeading: "How I work",
+    heroTitle: ["Business-minded,", "curious", "and keen to build."],
     pageTitle: "Robin Vikström — Business, people & technology",
-    pageDescription: "Robin Vikström — experience in sales, business development and client relationships, complemented by technical education and personal projects in AI and automation.",
+    pageDescription: "Robin Vikström — Account Management, Key Account Management and business development. A diploma in frontend development and personal projects in AI and automation.",
     intro:
-      "My background is in sales, business development and client relationships. I enjoy understanding needs, building relationships and finding solutions that create value.",
+      "My experience spans B2B and B2C sales, Account Management and Key Account Management. I enjoy developing client relationships, winning business and improving ways of working.",
     introMore:
-      "My interest in technology has also led me to explore digital product development, AI and automation. Here I share some of the projects I have worked on.",
-    disciplines: ["Business & discovery", "Product & UX", "AI & systems"],
+      "With a diploma in frontend development, I also explore AI and automation through personal projects.",
     aboutTitle: "Commercial background. Technical curiosity.",
     aboutP1:
-      "I have several years of experience in sales, client relationships and business development across construction, automotive, media and technology. My work has included winning new business, Key Account Management, larger deals and long-term client partnerships.",
+      "My background spans media, automotive, technology and construction. I have held account and budget responsibility for local and national business clients.",
     aboutP2:
-      "I enjoy taking responsibility, understanding a problem and working with others to find a solution. I like improving ways of working, developing ideas and, above all, getting things done.",
+      "I have managed the full sales process, from prospecting and needs analysis to negotiation, contracts and follow-up. I enjoy taking responsibility and solving problems with others.",
     aboutP3:
-      "My interest in technology led me to complete a frontend development programme and later to build personal projects in AI, automation and digital product development.",
+      "At Solvigo, I initiated and drove AI-assisted development of an internal CRM and sales system. I was responsible for requirements, planning and instructions to the AI tools.",
     aboutP4:
-      "For me, technology is about more than building systems. It is about helping people and businesses work smarter.",
-    belief:
-      "I want to contribute business understanding, a client perspective and initiatives that improve how a business works.",
-    learningNow: "My areas of expertise",
+      "My Higher Vocational Education Diploma in frontend development from Jensen complements my commercial experience with knowledge of React, TypeScript, API integration and UX/UI.",
+    learningNow: "Areas of experience",
     learningAreas: [
       "Business development",
-      "Sales & client relationships",
-      "Process & business improvement",
-      "AI & digitalisation",
+      "Account Management",
+      "Planning & coordination",
+      "AI & automation",
     ],
-    learningNote: "Commercial experience, complemented by technical education and hands-on projects.",
     approach: [
       [
         "Understand the problem",
@@ -137,7 +125,7 @@ export const copy = {
     contactTitle: "Have an idea",
     contactItalic: "in mind?",
     contactIntro:
-      "I’m always happy to talk about business, client relationships, development and new ideas. Whether you have a potential collaboration, an interesting opportunity or something you would like to discuss, please get in touch.",
+      "Want to discuss a role, a collaboration or an idea? I’d be happy to hear from you.",
     name: "Name",
     email: "Email",
     message: "What’s on your mind?",

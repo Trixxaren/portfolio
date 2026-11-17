@@ -1,6 +1,26 @@
 # Portfolio — arbetsplan
 
-## Senaste finjustering — 2026-10-31
+## Aktuell riktning — 2026-11-17
+
+Utgå från de senaste svenska och engelska CV-filerna. Lyft Account Management,
+Key Account Management, kund- och budgetansvar samt affärsutveckling. Solvigo
+beskrivs som tidigare erfarenhet och Sales-OS som AI-assisterad utveckling med
+Robins ansvar för kravställning, planering och instruktioner till AI-verktygen.
+Orten följer nu CV:t och visas som Stockholm, Sverige / Stockholm, Sweden.
+
+Visa inga projektstatusar eller avsnitt om status/nästa steg. Detta ersätter
+tidigare instruktioner om synlig status. Beskriv projektens faktiska funktioner.
+Korta presentationen och ta bort dekorativ numrering. Behåll sammanhållna kort
+och färgpalett. Samla projektsidornas tekniska fördjupning i en öppningsbar del
+och lyft roll och skärmbilder. Kontrollera båda språk och mobil samt starta localhost.
+
+Genomfört och verifierat: build och lint, båda språk, mobilvyer 320–1440 px,
+samtliga sju projektsidor och bildgallerier, öppningsbar teknisk fördjupning,
+Visa fler/färre med scroll och fokus samt simulerade formulärsvar.
+De publicerade CV-filerna matchar de senaste lokala originalen.
+Förhandsvisning på port 5174. Ändringarna sparas lokalt för granskning.
+
+## Tidigare finjustering — 2026-10-31
 
 Ta bort dekorativa pilar och kopparstrecket under porträttet. Funktionell
 bildbläddring, tillbaka-navigation och Visa fler/färre behålls. Visa Stockholm

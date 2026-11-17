@@ -2,12 +2,10 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { projects, projectStatus } from "../../data/projects";
-import { copy } from "../../data/copy";
+import { projects } from "../../data/projects";
 import ProjectCover from "./ProjectCover";
 export default function MyPortfolio({ language }) {
   const sv = language === "sv";
-  const t = copy[language];
   const [showAll, setShowAll] = useState(false);
   const grid = useRef(null);
   const toggle = useRef(null);
@@ -71,21 +69,15 @@ export default function MyPortfolio({ language }) {
   }
   return (
     <section className="work-section container" id="MyPortfolio">
-      <p className="eyebrow section-label">01 / {t.workEyebrow}</p>
       <div className="section-title-row">
         <h2>
           {sv
-            ? "Från idé till fungerande projekt"
-            : "From idea to working project"}
+            ? "Utvalda projekt"
+            : "Selected projects"}
         </h2>
       </div>
-      <p className="section-intro">
-        {sv
-          ? "Egna projekt. Läs om problemet, lösningen och min roll i varje bygge."
-          : "Personal projects. Explore the problem, the solution, and my role in each build."}
-      </p>
       <div className="project-grid" id="portfolio-projects" ref={grid}>
-        {visibleProjects.map((project, index) => (
+        {visibleProjects.map((project) => (
           <article className={"project-card" + (project.slug === "sales-os" ? " project-featured" : "")} key={project.slug}>
             <Link
               className="project-card-link"
@@ -94,12 +86,6 @@ export default function MyPortfolio({ language }) {
             >
               <ProjectCover project={project} language={language} />
               <div className="project-card-body">
-                <div className="project-card-meta">
-                  <span className="project-index">{project.slug === "sales-os" ? t.featuredCase : String(index + 1).padStart(2, "0")}</span>
-                  <span className={"status status-" + project.status}>
-                    {projectStatus[language][project.status]}
-                  </span>
-                </div>
                 <h3>{project.title}</h3>
                 <p>{project[language].summary}</p>
                 <ul className="tags">
